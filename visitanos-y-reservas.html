@@ -7,7 +7,7 @@
   <meta name="description"
     content="Reserva tu mesa en La Frescurita Café de Especialidad y Tostaduría en Alejandro Dumas 81, Polanco, Polanco IV Secc.">
   <title>La Frescurita Café</title>
-  <!-- Favicon / Tab Icon from resources -->
+  <!-- Favicon / Ícono de Pestaña desde resources -->
   <link rel="apple-touch-icon" sizes="180x180" href="resources/favicon_io/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="resources/favicon_io/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="resources/favicon_io/favicon-16x16.png">
@@ -15,7 +15,7 @@
   <link rel="shortcut icon" href="resources/favicon_io/favicon.ico">
   <link rel="manifest" href="resources/favicon_io/site.webmanifest">
 
-  <!-- Adobe Typekit & Google Fonts / Material Symbols -->
+  <!-- Fuentes de Adobe Typekit y Google Fonts / Material Symbols -->
   <link rel="stylesheet" href="https://use.typekit.net/ojm0owy.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,24 +23,24 @@
     href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
     rel="stylesheet">
 
-  <!-- CSS Stylesheet -->
+  <!-- Hoja de Estilos CSS -->
   <link rel="stylesheet" href="css/styles.css">
 
-  <!-- Tailwind CDN & Config -->
+  <!-- CDN y Configuración de Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="js/tailwind-config.js"></script>
 </head>
 
 <body
   class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed">
-  <!-- Reusable Header Component -->
+  <!-- Componente de Encabezado Reutilizable -->
   <div id="site-header"></div>
 
 
-  <!-- Main Content Area -->
+  <!-- Área de Contenido Principal -->
   <main class="w-full pt-28 bg-surface min-h-[calc(100vh-200px)]">
     <div class="flex flex-col w-full">
-      <!-- Subtle Ambient Glow Background -->
+      <!-- Fondo Ambiental Sutil -->
       <div class="relative w-full overflow-hidden">
         <div
           class="absolute -top-32 right-10 w-96 h-96 rounded-full bg-secondary-fixed/40 blur-3xl pointer-events-none -z-10">
@@ -49,7 +49,7 @@
           class="absolute top-96 left-0 w-80 h-80 rounded-full bg-tertiary-fixed/30 blur-3xl pointer-events-none -z-10">
         </div>
 
-        <!-- Editorial Hero Header -->
+        <!-- Encabezado Editorial del Hero -->
         <section class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin pt-space-xl pb-space-lg">
           <div class="flex flex-col md:flex-row md:items-end justify-between gap-gutter">
             <div class="max-w-2xl">
@@ -66,7 +66,7 @@
                 Te esperamos con el aroma del café recién tostado y un espacio pensado para pausar, conversar o crear.
               </p>
             </div>
-            <!-- Quick Status Pill Banner -->
+            <!-- Banner de Estado Rápido -->
             <div
               class="flex items-center gap-space-sm bg-surface-container-low p-space-sm rounded-xl shadow-sm border border-secondary/20">
               <div class="relative flex items-center justify-center w-3 h-3">
@@ -83,10 +83,10 @@
           </div>
         </section>
 
-        <!-- Main Dual Column Section -->
+        <!-- Sección Principal de Doble Columna -->
         <section class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin pb-space-xl">
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
-            <!-- LEFT COLUMN: Interactive Reservation Form (7 Cols) -->
+            <!-- COLUMNA IZQUIERDA: Formulario Interactivo de Reserva (7 Columnas) -->
             <div class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-space-md md:p-space-xl shadow-md">
               <div class="flex items-center justify-between pb-space-md">
                 <div>
@@ -101,7 +101,7 @@
               </div>
 
               <form class="space-y-space-lg" id="reservation-form">
-                <!-- 1. Selection of Space -->
+                <!-- 1. Selección de Espacio -->
                 <div class="space-y-space-xs">
                   <label class="font-label-lg text-label-lg text-primary block">
                     1. Selecciona el Ambiente
@@ -153,9 +153,9 @@
                   </div>
                 </div>
 
-                <!-- 2. Date Visual Selector & Time of Day -->
+                <!-- 2. Selector Visual de Fecha y Horario -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
-                  <!-- Visual Date Chooser -->
+                  <!-- Selector Visual de Fecha -->
                   <div class="space-y-space-xs">
                     <div class="flex items-center justify-between">
                       <label class="font-label-lg text-label-lg text-primary block">
@@ -182,13 +182,13 @@
                         </div>
                       </div>
                       <div class="grid grid-cols-7 gap-1 text-center font-label-sm text-label-sm" id="calendar-grid">
-                        <!-- Rendered dynamically by js/reservas.js -->
+                        <!-- Renderizado dinámicamente por js/reservas.js -->
                       </div>
                       <input type="hidden" name="selected_date" id="selected-date-input" value="">
                     </div>
                   </div>
 
-                  <!-- Time / Turn Slot -->
+                  <!-- Franja Horaria / Turno -->
                   <div class="space-y-space-xs">
                     <label class="font-label-lg text-label-lg text-primary block">
                       3. Turno &amp; Horario
@@ -249,7 +249,7 @@
                   </div>
                 </div>
 
-                <!-- 3. Number of People -->
+                <!-- 3. Cantidad de Personas -->
                 <div class="space-y-space-xs">
                   <div class="flex items-center justify-between">
                     <label class="font-label-lg text-label-lg text-primary">
@@ -286,7 +286,7 @@
                   </div>
                 </div>
 
-                <!-- 4. Contact Details -->
+                <!-- 4. Datos de Contacto -->
                 <div class="space-y-space-sm pt-space-xs">
                   <label class="font-label-lg text-label-lg text-primary block">
                     5. Tus Datos de Contacto
@@ -335,7 +335,7 @@
                   </div>
                 </div>
 
-                <!-- Submit CTA -->
+                <!-- Botón de Confirmación de Reserva -->
                 <div class="pt-space-sm">
                   <button
                     class="w-full py-space-sm px-space-lg bg-secondary hover:bg-primary-container text-on-secondary font-label-lg text-label-lg rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-space-sm"
@@ -349,7 +349,7 @@
                 </div>
               </form>
 
-              <!-- Interactive Toast Confirmation Box (Hidden initially) -->
+              <!-- Cuadro de Confirmación Toast Interactivo (Oculto inicialmente) -->
               <div
                 class="hidden mt-space-md p-space-md bg-surface-container text-primary rounded-xl flex items-start gap-space-sm border border-secondary/30"
                 id="booking-toast">
@@ -362,9 +362,9 @@
               </div>
             </div>
 
-            <!-- RIGHT COLUMN: Location, Schedules & Amenities (5 Cols) -->
+            <!-- COLUMNA DERECHA: Ubicación, Horarios y Servicios (5 Columnas) -->
             <div class="lg:col-span-5 space-y-space-md">
-              <!-- Location & Stylized Map Card -->
+              <!-- Tarjeta de Ubicación y Mapa Estilizado -->
               <div class="bg-surface-container-lowest rounded-xl p-space-md shadow-md space-y-space-sm">
                 <div class="flex items-center justify-between">
                   <span
@@ -379,14 +379,14 @@
                   En el corazón de Polanco, Polanco IV Secc. Fácil acceso peatonal y ciclovía cercana.
                 </p>
 
-                <!-- Map View Container with Interactive Google Maps Embed -->
+                <!-- Contenedor del Mapa con Google Maps Integrado -->
                 <div
                   class="w-full h-64 bg-surface-container rounded-xl overflow-hidden relative shadow-sm border border-outline-variant/30">
                   <iframe title="Mapa de Ubicación - La Frescurita en Polanco" class="w-full h-full border-0"
                     loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
                     src="https://maps.google.com/maps?q=Alejandro+Dumas+81,+Polanco,+Polanco+IV+Secc,+CDMX&t=&z=16&ie=UTF8&iwloc=&output=embed">
                   </iframe>
-                  <!-- Floating Direct Link Button -->
+                  <!-- Botón Flotante de Enlace Directo -->
                   <div class="absolute bottom-2.5 right-2.5 z-10">
                     <a class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-surface/95 backdrop-blur-md hover:bg-surface text-primary border border-outline-variant/40 rounded-lg font-label-sm text-label-sm font-semibold shadow-md hover:shadow-lg transition-all"
                       href="https://www.google.com/maps/search/?api=1&query=Alejandro+Dumas+81,+Polanco,+Polanco+IV+Secc,+CDMX"
@@ -409,7 +409,7 @@
                 </div>
               </div>
 
-              <!-- Schedule Detailed Card -->
+              <!-- Tarjeta Detallada de Horarios -->
               <div class="bg-surface-container-low rounded-xl p-space-md shadow-sm space-y-space-sm">
                 <div class="flex items-center gap-space-xs text-primary font-headline-sm text-headline-sm">
                   <span class="material-symbols-outlined text-secondary text-[22px]">schedule</span>
@@ -440,7 +440,7 @@
                 </div>
               </div>
 
-              <!-- Amenities & Perks -->
+              <!-- Servicios y Comodidades -->
               <div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
                 <h4 class="font-label-lg text-label-lg text-primary mb-space-sm font-semibold">
                   Comodidades para tu estadía
@@ -494,7 +494,7 @@
           </div>
         </section>
 
-        <!-- SECTION: Photo Mosaic of the Space -->
+        <!-- SECCIÓN: Mosaico Fotográfico del Espacio -->
         <section class="w-full bg-surface-container-low py-space-xl">
           <div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin">
             <div class="flex flex-col md:flex-row md:items-end justify-between pb-space-lg gap-space-sm">
@@ -510,9 +510,9 @@
               </p>
             </div>
 
-            <!-- Curated Bento Photo Gallery -->
+            <!-- Galería Bento de Fotos -->
             <div class="grid grid-cols-1 md:grid-cols-12 gap-space-md">
-              <!-- Main Bar Spotlight -->
+              <!-- Barra Principal -->
               <div class="md:col-span-7 group relative h-80 rounded-xl overflow-hidden shadow-md">
                 <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   alt="Barra de extracción manual de café de especialidad"
@@ -527,7 +527,7 @@
                 </div>
               </div>
 
-              <!-- Leafy Courtyard -->
+              <!-- Patio Arbolado -->
               <div class="md:col-span-5 group relative h-80 rounded-xl overflow-hidden shadow-md">
                 <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   alt="Patio arbolado luminoso"
@@ -542,7 +542,7 @@
                 </div>
               </div>
 
-              <!-- Quiet Nook / Cowork -->
+              <!-- Rincón Silencioso / Coworking -->
               <div class="md:col-span-4 group relative h-64 rounded-xl overflow-hidden shadow-md">
                 <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   alt="Rincón de lectura acogedor"
@@ -554,7 +554,7 @@
                 </div>
               </div>
 
-              <!-- Artisanal Ceramics Detail -->
+              <!-- Detalle de Cerámica Artesanal -->
               <div class="md:col-span-4 group relative h-64 rounded-xl overflow-hidden shadow-md">
                 <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   alt="Vajilla de cerámica artesanal torneada a mano"
@@ -566,7 +566,7 @@
                 </div>
               </div>
 
-              <!-- Roasting Workshop View -->
+              <!-- Vista del Taller de Tueste -->
               <div class="md:col-span-4 group relative h-64 rounded-xl overflow-hidden shadow-md">
                 <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   alt="Tambor de tostaduría artesanal"
@@ -581,7 +581,7 @@
           </div>
         </section>
 
-        <!-- SECTION: Frequently Asked Questions (Interactive Accordion) -->
+        <!-- SECCIÓN: Preguntas Frecuentes (Acordeón Interactivo) -->
         <section class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin py-space-xl">
           <div class="max-w-3xl mx-auto">
             <div class="text-center pb-space-lg">
@@ -594,7 +594,7 @@
             </div>
 
             <div class="space-y-space-sm" id="faq-accordion">
-              <!-- FAQ Item 1 -->
+              <!-- Pregunta Frecuente 1 -->
               <div class="bg-surface-container-low rounded-xl overflow-hidden transition-all shadow-sm">
                 <button
                   class="faq-toggle w-full p-space-md text-left flex items-center justify-between gap-space-md focus:outline-none"
@@ -611,7 +611,7 @@
                 </div>
               </div>
 
-              <!-- FAQ Item 2 -->
+              <!-- Pregunta Frecuente 2 -->
               <div class="bg-surface-container-low rounded-xl overflow-hidden transition-all shadow-sm">
                 <button
                   class="faq-toggle w-full p-space-md text-left flex items-center justify-between gap-space-md focus:outline-none"
@@ -629,7 +629,7 @@
                 </div>
               </div>
 
-              <!-- FAQ Item 3 -->
+              <!-- Pregunta Frecuente 3 -->
               <div class="bg-surface-container-low rounded-xl overflow-hidden transition-all shadow-sm">
                 <button
                   class="faq-toggle w-full p-space-md text-left flex items-center justify-between gap-space-md focus:outline-none"
@@ -648,7 +648,7 @@
                 </div>
               </div>
 
-              <!-- FAQ Item 4 -->
+              <!-- Pregunta Frecuente 4 -->
               <div class="bg-surface-container-low rounded-xl overflow-hidden transition-all shadow-sm">
                 <button
                   class="faq-toggle w-full p-space-md text-left flex items-center justify-between gap-space-md focus:outline-none"
@@ -667,7 +667,7 @@
               </div>
             </div>
 
-            <!-- Assistance Contact Box -->
+            <!-- Cuadro de Contacto y Asistencia Directa -->
             <div
               class="mt-space-lg p-space-md bg-surface-container rounded-xl flex flex-col sm:flex-row items-center justify-between gap-space-sm text-center sm:text-left">
               <div class="flex items-center gap-space-sm">
@@ -692,10 +692,10 @@
     </div>
   </main>
 
-  <!-- Reusable Footer Component -->
+  <!-- Componente de Pie de Página Reutilizable -->
   <div id="site-footer"></div>
 
-  <!-- Core & Page Specific JavaScript -->
+  <!-- JavaScript Principal y Específico de la Página -->
   <script src="js/main.js"></script>
   <script src="js/reservas.js"></script>
 </body>
