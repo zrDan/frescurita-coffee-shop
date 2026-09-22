@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Frescurita Café</title>
+  <meta name="description"
+    content="Tostaduría artesanal de lotes pequeños, café de especialidad de origen ético y panadería de masa madre con 36 horas de fermentación.">
+  <!-- Favicon / Tab Icon from resources -->
+  <link rel="apple-touch-icon" sizes="180x180" href="resources/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="resources/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="resources/favicon_io/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="resources/favicon_io/favicon.ico">
+  <link rel="shortcut icon" href="resources/favicon_io/favicon.ico">
+  <link rel="manifest" href="resources/favicon_io/site.webmanifest">
+
+  <!-- Adobe Typekit & Google Fonts / Material Symbols -->
+  <link rel="stylesheet" href="https://use.typekit.net/ojm0owy.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Tailwind CDN & Config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/tailwind-config.js"></script>
+</head>
+
+<body
+  class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+
+  <!-- Reusable Header Component -->
+  <div id="site-header"></div>
+
+
+  <!-- Main Content -->
+  <main class="w-full pt-28 bg-surface min-h-[calc(100vh-200px)]">
+    <div class="flex flex-col w-full">
+
+      <!-- HERO SECTION -->
+      <section class="relative w-full overflow-hidden bg-surface-container-low py-space-lg lg:py-space-lg">
+        <div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+
+            <div class="lg:col-span-7 flex flex-col z-10">
+              <div
+                class="inline-flex items-center gap-space-xs self-start px-space-md py-1 rounded-full bg-[#fcb391]/25 text-[#6c3920] mb-space-sm border border-[#885035]/15">
+                <span class="material-symbols-outlined text-[16px] text-[#885035]">local_fire_department</span>
+                <span class="font-label-sm text-label-sm tracking-wider uppercase font-semibold">Tostaduría Artesanal •
+                  Lote Semanal #142</span>
+              </div>
+              <h1 class="font-headline-xl text-headline-xl lg:text-display-lg text-primary tracking-tight mb-space-sm">
+                El arte del café de especialidad, desde la finca hasta tu taza.</h1>
+              <p class="font-body-xl text-body-xl text-on-surface-variant max-w-xl mb-space-md">Pequeños lotes tostados
+                a mano en tambor de hierro, granos arábica de altura recolectados en su punto óptimo de cereza, y
+                panadería botánica de masa madre con 36 horas de fermentación lenta.</p>
+
+              <div class="flex flex-wrap items-center gap-space-md mb-space-md">
+                <a class="px-space-xl py-3.5 bg-[#5c3826] text-[#ffffff] rounded-lg font-label-lg text-label-lg shadow-md hover:bg-[#422312] transition-all duration-300 flex items-center gap-space-xs transform hover:-translate-y-0.5"
+                  data-path="menu-y-especialidades" href="menu-y-especialidades.html">
+                  <span>Explorar Menú de Barra</span>
+                  <span class="material-symbols-outlined text-[18px]">east</span>
+                </a>
+                <a class="px-space-lg py-3.5 bg-[#fff9ee] text-[#422312] border border-[#d5c3bb]/60 rounded-lg font-label-lg text-label-lg shadow-sm hover:bg-[#f3ede2] transition-all duration-200 flex items-center gap-space-xs"
+                  data-path="origen-y-tostaduria" href="origen-y-tostaduria.html">
+                  <span class="material-symbols-outlined text-[18px] text-[#885035]">psychiatry</span>
+                  <span>Conoce Nuestro Origen</span>
+                </a>
+              </div>
+
+              <!-- Key Metrics -->
+              <div
+                class="grid grid-cols-3 gap-space-sm pt-space-xs max-w-lg bg-surface-container/60 p-space-sm rounded-xl backdrop-blur-sm">
+                <div class="flex flex-col">
+                  <span class="font-headline-sm text-headline-sm text-secondary">100%</span>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant">Arábica de Altura</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="font-headline-sm text-headline-sm text-secondary">+86 SCA</span>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant">Calidad de Cata</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="font-headline-sm text-headline-sm text-secondary">&lt; 7 días</span>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant">Tueste Fresco</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hero Image Banner -->
+            <div class="lg:col-span-5 relative mt-space-md lg:mt-0">
+              <div
+                class="relative w-full aspect-[4/5] max-w-md mx-auto rounded-2xl overflow-hidden shadow-xl bg-surface-container card-zoom">
+                <img class="w-full h-full object-cover"
+                  data-alt="Close up artisanal barista extracting golden crema espresso"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJbuxsHREwy5LbenJk73cTflSjThO2-b5nNn6d3o5zrPLbrT55OgQOGq2t1byBt1cQAh37X20pUheeJxpkKROtvNiQkJVD0HCuAJs5-rPUdtR07X7-Gxwj10PVi3XLo0Cu12cN9z7KVaPGAo3rF4euqL5XCiFgwNkjFNHi81z_TvlT8YHksWknc9MtKaVFTp-_h7pOrlz8Kl-1cqlhO01N2w-n4iU5k8BVD26UJxtwoZXMrvG5P7r2">
+                <div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent"></div>
+                <div
+                  class="absolute bottom-4 left-4 right-4 p-space-sm bg-surface-bright/95 backdrop-blur-md rounded-xl shadow-lg flex items-center justify-between">
+                  <div class="flex items-center gap-space-sm">
+                    <div
+                      class="w-9 h-9 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+                      <span class="material-symbols-outlined text-[18px]">humidity_percentage</span>
+                    </div>
+                    <div>
+                      <p class="font-label-md text-label-md text-primary">Micro-lote Huila Supremo</p>
+                      <p class="font-label-sm text-label-sm text-on-surface-variant">Notas a durazno blanco, cacao y
+                        jazmín</p>
+                    </div>
+                  </div>
+                  <span
+                    class="font-label-sm text-label-sm px-2.5 py-0.5 bg-[#f9f3e8] text-[#5c3826] border border-[#5c3826]/20 rounded-full font-medium">En
+                    Grifo</span>
+                </div>
+              </div>
+              <div
+                class="hidden sm:flex absolute -top-4 -right-4 bg-primary text-surface p-space-sm rounded-xl shadow-xl max-w-xs items-center gap-space-sm z-20">
+                <span class="material-symbols-outlined text-secondary-container text-[20px]">bakery_dining</span>
+                <div>
+                  <p
+                    class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-container font-semibold">
+                    Hornada Matinal</p>
+                  <p class="font-body-sm text-body-sm text-surface-variant">Masa madre viva fermentada con paciencia.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: NUESTRA FILOSOFÍA -->
+      <section class="w-full py-space-lg bg-surface lg:py-space-lg">
+        <div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin">
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-sm">
+            <div class="max-w-xl">
+              <span
+                class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.2em] font-semibold">Manifiesto •
+                01</span>
+              <h2 class="font-headline-xl text-headline-xl text-primary mt-0.5">Nuestra Filosofía de Grano &amp; Horno
+              </h2>
+              <p class="font-body-md text-body-md text-on-surface-variant mt-1">Creemos que la prisa arruina los mejores
+                momentos. Honramos los tiempos de la tierra, la alquimia del fuego moderado y la calidez del servicio
+                sincero.</p>
+            </div>
+            <div class="hidden lg:block text-right">
+              <span class="font-label-sm text-label-sm text-outline uppercase tracking-widest">Trazabilidad Total</span>
+              <p class="font-headline-sm text-headline-sm text-primary">100% Granos de Origen Directo</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+
+            <div
+              class="group flex flex-col bg-surface-container-low rounded-2xl p-space-md shadow-sm hover:shadow-md transition-all duration-300">
+              <div
+                class="w-10 h-10 rounded-xl bg-surface-container-highest flex items-center justify-center text-secondary mb-space-sm group-hover:bg-secondary group-hover:text-surface transition-colors">
+                <span class="material-symbols-outlined text-[24px]">local_fire_department</span>
+              </div>
+              <span class="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider">Perfil
+                Artesanal</span>
+              <h3 class="font-headline-sm text-headline-sm text-primary mt-0.5 mb-1">Tueste en Pequeños Lotes</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm flex-grow">Tostamos en tambor con
+                capacidad máxima de 6 kilogramos. Modulamos la curva térmica grado a grado para caramelizar los azúcares
+                naturales del grano sin enmascarar su acidez frutal originaria.</p>
+              <div
+                class="pt-space-xs bg-surface-container-lowest/80 p-space-xs rounded-lg flex items-center justify-between px-space-sm py-1">
+                <span class="font-label-sm text-label-sm text-on-surface-variant">Lotes controlados</span>
+                <span class="font-label-md text-label-md text-primary font-bold">Curvas SCA 100%</span>
+              </div>
+            </div>
+
+            <div
+              class="group flex flex-col bg-surface-container-low rounded-2xl p-space-md shadow-sm hover:shadow-md transition-all duration-300">
+              <div
+                class="w-10 h-10 rounded-xl bg-surface-container-highest flex items-center justify-center text-secondary mb-space-sm group-hover:bg-secondary group-hover:text-surface transition-colors">
+                <span class="material-symbols-outlined text-[24px]">handshake</span>
+              </div>
+              <span class="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider">Comercio
+                Ético</span>
+              <h3 class="font-headline-sm text-headline-sm text-primary mt-0.5 mb-1">Comercio Directo &amp; Justo</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm flex-grow">Trato sin
+                intermediarios con familias productoras de Huila (Colombia), Yirgacheffe (Etiopía) y Antigua
+                (Guatemala). Pagamos hasta un 65% por encima del precio internacional estándar de bolsa.</p>
+              <div
+                class="pt-space-xs bg-surface-container-lowest/80 p-space-xs rounded-lg flex items-center justify-between px-space-sm py-1">
+                <span class="font-label-sm text-label-sm text-on-surface-variant">Fincas aliadas</span>
+                <span class="font-label-md text-label-md text-primary font-bold">7 Cooperativas</span>
+              </div>
+            </div>
+
+            <div
+              class="group flex flex-col bg-surface-container-low rounded-2xl p-space-md shadow-sm hover:shadow-md transition-all duration-300">
+              <div
+                class="w-10 h-10 rounded-xl bg-surface-container-highest flex items-center justify-center text-secondary mb-space-sm group-hover:bg-secondary group-hover:text-surface transition-colors">
+                <span class="material-symbols-outlined text-[24px]">bakery_dining</span>
+              </div>
+              <span class="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider">Masa Madre
+                Silvestre</span>
+              <h3 class="font-headline-sm text-headline-sm text-primary mt-0.5 mb-1">Repostería Diaria &amp; Panadería
+              </h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm flex-grow">Harinas orgánicas de
+                molino de piedra, masa madre viva de centeno y fermentación a baja temperatura por 36 horas. Horneamos
+                dos veces al día: pan fresco y crujiente para cada taza.</p>
+              <div
+                class="pt-space-xs bg-surface-container-lowest/80 p-space-xs rounded-lg flex items-center justify-between px-space-sm py-1">
+                <span class="font-label-sm text-label-sm text-on-surface-variant">Fermentación</span>
+                <span class="font-label-md text-label-md text-primary font-bold">36 Horas Frío</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: FAVORITOS DE LA BARRA -->
+      <section class="w-full py-space-lg bg-surface-container lg:py-space-lg">
+        <div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin">
+          <div class="flex flex-col md:flex-row items-start md:items-end justify-between mb-space-lg">
+            <div>
+              <span
+                class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.2em] font-semibold">Selección de
+                Temporada</span>
+              <h2 class="font-headline-xl text-headline-xl text-primary mt-0.5">Favoritos de Nuestra Barra</h2>
+              <p class="font-body-md text-body-md text-on-surface-variant mt-1">Combinaciones preparadas con precisión
+                de extracción de 1:2 y leche vegetal vaporizada en microespuma sedosa.</p>
+            </div>
+            <a class="mt-space-sm md:mt-0 font-label-lg text-label-lg text-secondary hover:text-primary transition-colors flex items-center gap-1"
+              data-path="menu-y-especialidades" href="menu-y-especialidades.html">
+              <span>Ver Menú Completo de Cafés</span>
+              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+
+            <!-- Item 1 -->
+            <a href="menu-y-especialidades.html"
+              class="flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group card-zoom cursor-pointer block">
+              <div class="relative w-full h-48 overflow-hidden bg-surface-container">
+                <img class="w-full h-full object-cover" data-alt="Artisanal Flat White in textured speckled ceramic cup"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZNqS8_PyntZdKa7LdDpzTvHb8Sqijdc-j4kRJBd5ZUM_31EAK6kDwSGpaea1JznuLpUYFDrTpFMQ1zc7FT1_gbBCQ28O5JggHh4jRZAQNYK7qPQVTPiaS-4vZlY0TAXnapXG4yQaDVSnQ62SyxCULMe_QUgfctz9YcvoMo9r2ADIl5WQ0ApgxwUDevxnycN2UEI9rhXYKUkvlEtpaoGpNonkh6nDCvnrkmveF898RCJEktlg41XVm">
+                <span
+                  class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full bg-[#f9f3e8] text-[#5c3826] border border-[#5c3826]/20 font-label-sm text-label-sm font-medium shadow-sm">Bebida
+                  Insignia</span>
+              </div>
+              <div class="p-space-sm flex flex-col flex-grow">
+                <div class="flex justify-between items-baseline mb-1">
+                  <h3
+                    class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors">
+                    Flat White Avena</h3>
+                  <span class="font-label-lg text-label-lg text-secondary font-bold">$80</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm flex-grow">Doble ristretto de
+                  origen Colombia Huila con leche de avena orgánica emulsionada en textura aterciopelada.</p>
+                <div class="flex flex-wrap gap-1 pt-space-xs">
+                  <span
+                    class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Caramelo</span>
+                  <span
+                    class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Nuez
+                    pecán</span>
+                </div>
+              </div>
+            </a>
+
+            <!-- Item 2 -->
+            <a href="menu-y-especialidades.html"
+              class="flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group card-zoom cursor-pointer block">
+              <div class="relative w-full h-48 overflow-hidden bg-surface-container">
+                <img class="w-full h-full object-cover" data-alt="Pour over coffee dripping V60"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvQINRdq5Up_wLFecDjwAht5B1Q7P8f5s83IP-nZjQWVTRpbCrdbVoGhQox7BBw_VV2JsfOGpF6o-T67rZv-mPPDwZFpdSGb0kr_V2x8O73A7q2S7ewqyyVJAQOyISZlugns_WcC1kUJBjzMkoBBaEfg4NyvLg1tAqixnveQzlqqPZNH2o40Ys6Od-edAbr0zX-L9FczLB0S4YLB-ikLTQM5-jbzUICnzU3iSX9q4ZXyEpMqVKIBkD">
+                <span
+                  class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full bg-[#f9f3e8] text-[#5c3826] border border-[#5c3826]/20 font-label-sm text-label-sm font-medium shadow-sm">Filtrado
+                  Manual</span>
+              </div>
+              <div class="p-space-sm flex flex-col flex-grow">
+                <div class="flex justify-between items-baseline mb-1">
+                  <h3
+                    class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors">
+                    Pour Over V60 Geisha</h3>
+                  <span class="font-label-lg text-label-lg text-secondary font-bold">$110</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm flex-grow">Variedad Geisha de
+                  altura de Guatemala. Filtrado pausado por goteo que potencia notas botánicas cristalinas.</p>
+                <div class="flex flex-wrap gap-1 pt-space-xs">
+                  <span
+                    class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Jazmín</span>
+                  <span
+                    class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Bergamota</span>
+                  <span
+                    class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Miel</span>
+                </div>
+              </div>
+            </a>
+
+            <!-- Item 3 -->
+            <a href="menu-y-especialidades.html"
+              class="flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group card-zoom cursor-pointer block">
+              <div class="relative w-full h-48 overflow-hidden bg-surface-container">
+                <img class="w-full h-full object-cover" data-alt="Cold brew coffee with crystal ice block"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrLdFaQ_DRrTNP7WTAo2UdpNNf1dGe0atVikJY7rwLY9vuTS0S54Gzm14G0DqQuaAzmng92Mf31EomIrxBLyH7wL9ybxHNMANZp_66BXdrNCDBSyx5vPray-tzdPXmMWdOnoRlNRugiryqh8G3gC0cM-5kxoxbUyjj_LaQNTbXvYPKd2WTNYMPmxtIg8QgHM4bezIiYF1BMDPre6z-WtKTdLpADLANAdS0hYEiR7YgRX398ahPx1G8">
+                <span
+                  class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full bg-surface-bright/90 font-label-sm text-label-sm text-secondary font-medium">Macerado
+                  en Frío</span>
+              </div>
+              <div class="p-space-sm flex flex-col flex-grow">
+                <div class="flex justify-between items-baseline mb-1">
+                  <h3
+                    class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors">
+                    Cold Brew 24 Horas</h3>
+                  <span class="font-label-lg text-label-lg text-secondary font-bold">$85</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm flex-grow">Maceración en frío
+                  por goteo lento. Acidez casi nula, cuerpo achocolatado profundo y piel de naranja fresca.</p>
+                <div class="flex flex-wrap gap-1 pt-space-xs">
+                  <span
+                    class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Cacao
+                    70%</span>
+                  <span
+                    class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Cítrico
+                    suave</span>
+                </div>
+              </div>
+            </a>
+
+            <!-- Item 4 -->
+            <a href="menu-y-especialidades.html"
+              class="flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group card-zoom cursor-pointer block">
+              <div class="relative w-full h-48 overflow-hidden bg-surface-container">
+                <img class="w-full h-full object-cover" data-alt="Golden brown croissant with toasted almonds"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0c1bXlO5TQ33vjDV3ByMW3Plj9cTJcps_FftK107USm1BAFaNh75MSiybbuNzgGlQwIkSQHuujAr9f-ZEH-lDuKy2EJLuxKzIjr5aLeHnKTjkj6EU4eBq490dioncay47p4zgZneevQSUQyFMMRkHZKkXqvzt1k56PGTaoxrNFmq--9SMGF2cRomSs86ADvQb6PYn9NiFbxJA-NYctZDaXyRANN27wUos1Z43my2yMvQtPgVPcoqt">
+                <span
+                  class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-medium">Horno
+                  de Masa Madre</span>
+              </div>
+              <div class="p-space-sm flex flex-col flex-grow">
+                <div class="flex justify-between items-baseline mb-1">
+                  <h3
+                    class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors">
+                    Croissant Cardamomo</h3>
+                  <span class="font-label-lg text-label-lg text-secondary font-bold">$70</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm flex-grow">Hojaldrado con
+                  mantequilla de campo, relleno de frangipane con infusión de cardamomo verde y almendras tostadas.</p>
+                <div class="flex flex-wrap gap-1 pt-space-xs">
+                  <span
+                    class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Hojaldre
+                    72 capas</span>
+                  <span
+                    class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Mantequilla
+                    pura</span>
+                </div>
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: LA EXPERIENCIA EN NUESTRO ESPACIO -->
+      <section class="w-full py-space-lg bg-surface overflow-hidden lg:py-space-lg">
+        <div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+
+            <div class="lg:col-span-7 grid grid-cols-2 gap-space-sm">
+              <div class="space-y-space-sm">
+                <div class="rounded-2xl overflow-hidden h-48 bg-surface-container shadow-md card-zoom">
+                  <img class="w-full h-full object-cover" data-alt="Sunlit minimalist specialty cafe interior"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJBilxFD_FEUoqsXL_2kmjB2KAKlH8ltjFaxMYC8BNPSzR2Ix0NLDhSEXwxzTaKBA56LIHkhx8o7TKUC04V5v57lYouAGHjKUntKMlmMqs6ocL_zccPhbMhFer5bYNB-DfnS65BfJ0cRNFToYjAXagTlNT0cKHDBklf8g-Tj8arbh_f19-VAlL7rzGSrGY6oTk2wN_YogKhTCQ7uE3HiXx-q-drxKtm1UP_drcKyVse-aPeN3K2vvC">
+                </div>
+                <div class="rounded-2xl overflow-hidden h-36 bg-surface-container shadow-md card-zoom">
+                  <img class="w-full h-full object-cover" data-alt="Artisanal shelves filled with coffee bags"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJBilxFD_FEUoqsXL_2kmjB2KAKlH8ltjFaxMYC8BNPSzR2Ix0NLDhSEXwxzTaKBA56LIHkhx8o7TKUC04V5v57lYouAGHjKUntKMlmMqs6ocL_zccPhbMhFer5bYNB-DfnS65BfJ0cRNFToYjAXagTlNT0cKHDBklf8g-Tj8arbh_f19-VAlL7rzGSrGY6oTk2wN_YogKhTCQ7uE3HiXx-q-drxKtm1UP_drcKyVse-aPeN3K2vvC">
+                </div>
+              </div>
+              <div class="space-y-space-sm pt-space-sm">
+                <div class="rounded-2xl overflow-hidden h-36 bg-surface-container shadow-md card-zoom">
+                  <img class="w-full h-full object-cover" data-alt="Customer enjoying coffee and book"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1YA36JRv_hp04EHYsuO-j-rXxwZe1Aa5xXZ9PYHSuWRhjAg_YgaNw-SpqpjHSnYfDwBG6vIDay2ufECiUKofvX6ddvoA88m8PPlPrZ7ptk7HX6hv2_JJI1650BzPua7ZqOBibHZXyuLD7Aibb-8OGxHsvw-kXe8CxfXNRJSnwecSFFeCqh_hioSUifTRUQt26oUAv15b1OIrb4VPYTzLlEOw9Tb2qzB7w_t_D10h2sfyp3UB7iV9Q">
+                </div>
+                <div class="rounded-2xl overflow-hidden h-48 bg-surface-container shadow-md card-zoom">
+                  <img class="w-full h-full object-cover" data-alt="Vintage copper and stainless steel espresso machine"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHJR0yK2TfVlUSmcbs1WVEdHVXLijuVYgZ9ExtsAgAx1TCDelQ_0NUz8O2nTa9isvBrh2QjDtr6nv6aEGimtT9bLD8MLV_AlA4e78_DCD8ibFrMMTYAo86THtjn0Cluhz-2ugWmfLyy9qs-eS2zYX04t7-XOedAKPHKfCyvkzmo-pmdQQv31IPeOvwSQ37i2wM_tlBQwP6Wem4ZzmzTEHffdhiWsPHeLdUWE5XX8xbhEslbS4PSGeH">
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-5 flex flex-col lg:pl-space-md mt-space-md lg:mt-0">
+              <span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.2em] font-semibold">El
+                Santuario Urbano</span>
+              <h2 class="font-headline-xl text-headline-xl text-primary mt-0.5 mb-space-sm">Un refugio donde el tiempo
+                recobra su compás.</h2>
+              <p class="font-body-md text-body-md text-on-surface-variant mb-space-sm">Diseñamos nuestro espacio como
+                una extensión del hogar: maderas recuperadas, luz cenital filtrada, música en vinilo a volumen moderado
+                y el aroma inconfundible de los granos tostándose en vivo cada mañana.</p>
+
+              <div class="bg-surface-container-low p-space-md rounded-2xl shadow-sm mb-space-sm relative">
+                <span
+                  class="material-symbols-outlined text-secondary/30 text-[40px] absolute top-2 right-3 pointer-events-none select-none">format_quote</span>
+                <p class="font-headline-sm text-headline-sm italic text-primary mb-space-sm leading-snug">“La Frescurita
+                  logra algo esquivo: el rigor técnico del mejor café de especialidad del mundo sin la rigidez snob. Su
+                  flat white y su pan de masa madre son un ritual dominical irremplazable.”</p>
+                <div class="flex items-center gap-space-sm">
+                  <div
+                    class="w-9 h-9 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold text-label-md">
+                    MG</div>
+                  <div>
+                    <p class="font-label-md text-label-md text-primary font-semibold">Mariana Gómez</p>
+                    <p class="font-label-sm text-label-sm text-on-surface-variant">Crítica Gastronómica • Revista
+                      Culinaria Sur</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-space-lg pt-space-xs text-on-surface-variant">
+                <div class="flex items-center gap-space-xs font-label-md text-label-md">
+                  <span class="material-symbols-outlined text-secondary text-[18px]">wifi</span>
+                  <span>Espacio Wi-Fi Silencioso</span>
+                </div>
+                <div class="flex items-center gap-space-xs font-label-md text-label-md">
+                  <span class="material-symbols-outlined text-secondary text-[18px]">pets</span>
+                  <span>100% Pet Friendly</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: CALL TO ACTION BANNER & VISIT INFO -->
+      <section class="w-full bg-[#5c3826] text-[#fff9ee] py-space-md lg:py-space-lg">
+        <div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+
+            <div class="lg:col-span-7 flex flex-col">
+              <div
+                class="inline-flex items-center gap-space-xs px-3 py-0.5 rounded-full bg-[#fff9ee]/15 text-[#ffdbcc] mb-space-sm self-start border border-[#ffdbcc]/20">
+                <span class="material-symbols-outlined text-[14px]">nest_clock_farsight_analog</span>
+                <span class="font-label-sm text-label-sm tracking-wider uppercase">Mesa Directa • Sin Esperas</span>
+              </div>
+              <h2
+                class="font-headline-xl text-headline-xl lg:text-display-lg text-[#fff9ee] tracking-tight mb-space-xs">
+                ¿Un café recién hecho hoy?</h2>
+              <p class="font-body-xl text-body-xl text-[#f0bba2] max-w-lg mb-space-md">Nuestros baristas están listos
+                para moler el grano a tu medida. Reserva una mesa para desayunar o simplemente acércate al mostrador por
+                tu dosis diaria.</p>
+
+              <div class="flex flex-wrap items-center gap-space-md">
+                <a class="px-space-xl py-3 bg-[#885035] hover:bg-[#422312] text-[#ffffff] rounded-lg font-label-lg text-label-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-space-xs"
+                  data-path="visitanos-y-reservas" href="visitanos-y-reservas.html">
+                  <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+                  <span>Reservar Mesa en el Salón</span>
+                </a>
+                <a class="px-space-lg py-3 bg-[#fff9ee]/10 text-[#fff9ee] hover:bg-[#fff9ee]/20 border border-[#fff9ee]/25 rounded-lg font-label-lg text-label-lg transition-all duration-200 flex items-center gap-space-xs"
+                  href="tel:+541148213902">
+                  <span class="material-symbols-outlined text-[18px]">call</span>
+                  <span>Llamar al Local</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Visit Info Card -->
+            <div
+              class="lg:col-span-5 bg-[#fff9ee] text-[#1d1c15] rounded-2xl p-space-md shadow-xl mt-space-md lg:mt-0 border border-[#d5c3bb]/40">
+              <h3 class="font-headline-sm text-headline-sm text-[#422312] mb-space-xs flex items-center gap-space-xs">
+                <span class="material-symbols-outlined text-[#885035]">store</span>
+                <span>Te Esperamos en el Pasaje</span>
+              </h3>
+              <div class="space-y-space-xs font-body-sm text-body-sm text-[#51443f] mb-space-sm">
+                <div class="flex items-start gap-space-sm">
+                  <span class="material-symbols-outlined text-[#885035] text-[18px] mt-0.5">place</span>
+                  <div>
+                    <p class="font-semibold text-[#422312]">Alejandro Dumas 81</p>
+                    <p>Polanco, Polanco IV Secc</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-space-sm pt-space-xs">
+                  <span class="material-symbols-outlined text-[#885035] text-[18px] mt-0.5">schedule</span>
+                  <div class="w-full">
+                    <div class="flex justify-between py-0.5">
+                      <span>Lunes a Viernes</span>
+                      <span class="font-semibold text-[#422312]">07:30 - 20:00</span>
+                    </div>
+                    <div class="flex justify-between py-0.5">
+                      <span>Sábados y Domingos</span>
+                      <span class="font-semibold text-[#422312]">08:30 - 21:00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-[#f9f3e8] rounded-xl p-space-sm flex items-center justify-between border border-[#e8e2d7]">
+                <div class="flex items-center gap-space-xs text-[#1d1c15]">
+                  <span class="w-2.5 h-2.5 rounded-full bg-[#885035] animate-pulse"></span>
+                  <span class="font-label-md text-label-md font-semibold text-[#422312]">Barra Abierta Ahora</span>
+                </div>
+                <a class="text-[#885035] hover:text-[#422312] font-label-md text-label-md font-semibold hover:underline flex items-center gap-0.5"
+                  data-path="visitanos-y-reservas" href="visitanos-y-reservas.html">
+                  <span>Cómo llegar</span>
+                  <span class="material-symbols-outlined text-[14px]">north_east</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Reusable Footer Component -->
+  <div id="site-footer"></div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

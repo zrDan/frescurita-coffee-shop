@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Reserva tu mesa en La Frescurita Café de Especialidad y Tostaduría en Alejandro Dumas 81, Polanco, Polanco IV Secc.">
+  <title>La Frescurita Café</title>
+  <!-- Favicon / Tab Icon from resources -->
+  <link rel="apple-touch-icon" sizes="180x180" href="resources/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="resources/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="resources/favicon_io/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="resources/favicon_io/favicon.ico">
+  <link rel="shortcut icon" href="resources/favicon_io/favicon.ico">
+  <link rel="manifest" href="resources/favicon_io/site.webmanifest">
+
+  <!-- Adobe Typekit & Google Fonts / Material Symbols -->
+  <link rel="stylesheet" href="https://use.typekit.net/ojm0owy.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Tailwind CDN & Config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/tailwind-config.js"></script>
+</head>
+
+<body
+  class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+  <!-- Reusable Header Component -->
+  <div id="site-header"></div>
+
+
+  <!-- Main Content Area -->
+  <main class="w-full pt-28 bg-surface min-h-[calc(100vh-200px)]">
+    <div class="flex flex-col w-full">
+      <!-- Subtle Ambient Glow Background -->
+      <div class="relative w-full overflow-hidden">
+        <div
+          class="absolute -top-32 right-10 w-96 h-96 rounded-full bg-secondary-fixed/40 blur-3xl pointer-events-none -z-10">
+        </div>
+        <div
+          class="absolute top-96 left-0 w-80 h-80 rounded-full bg-tertiary-fixed/30 blur-3xl pointer-events-none -z-10">
+        </div>
+
+        <!-- Editorial Hero Header -->
+        <section class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin pt-space-xl pb-space-lg">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-gutter">
+            <div class="max-w-2xl">
+              <div
+                class="inline-flex items-center gap-space-xs px-space-sm py-1 bg-surface-container rounded-full text-secondary font-label-sm text-label-sm mb-space-sm uppercase tracking-widest">
+                <span class="material-symbols-outlined text-[15px]"
+                  style="font-variation-settings: 'FILL' 1;">table_restaurant</span>
+                <span>Experiencia Presencial &amp; Reservas</span>
+              </div>
+              <h1 class="font-headline-xl text-headline-xl text-primary tracking-tight">
+                Encuentra tu Rincón Favorito
+              </h1>
+              <p class="font-body-xl text-body-xl text-on-surface-variant mt-space-sm max-w-xl">
+                Te esperamos con el aroma del café recién tostado y un espacio pensado para pausar, conversar o crear.
+              </p>
+            </div>
+            <!-- Quick Status Pill Banner -->
+            <div
+              class="flex items-center gap-space-sm bg-surface-container-low p-space-sm rounded-xl shadow-sm border border-secondary/20">
+              <div class="relative flex items-center justify-center w-3 h-3">
+                <span
+                  class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-container opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+              </div>
+              <div class="text-left">
+                <p class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Tostando
+                  Ahora Mismo</p>
+                <p class="font-label-lg text-label-lg text-primary">Lote Caturra Chiroso (Huila)</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Main Dual Column Section -->
+        <section class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin pb-space-xl">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+            <!-- LEFT COLUMN: Interactive Reservation Form (7 Cols) -->
+            <div class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-space-md md:p-space-xl shadow-md">
+              <div class="flex items-center justify-between pb-space-md">
+                <div>
+                  <span
+                    class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold font-cooper">Paso
+                    a Paso</span>
+                  <h2 class="font-headline-lg text-headline-lg text-primary">Reserva tu Mesa</h2>
+                </div>
+                <span
+                  class="text-on-surface-variant font-label-sm text-label-sm bg-surface-container px-3 py-1 rounded-full">Sin
+                  costo de seña previa</span>
+              </div>
+
+              <form class="space-y-space-lg" id="reservation-form">
+                <!-- 1. Selection of Space -->
+                <div class="space-y-space-xs">
+                  <label class="font-label-lg text-label-lg text-primary block">
+                    1. Selecciona el Ambiente
+                  </label>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-xs">
+                    <label
+                      class="relative flex flex-col p-space-sm bg-surface-container-low hover:bg-surface-container rounded-lg cursor-pointer transition-all space-selection has-[:checked]:bg-[#5c3826] has-[:checked]:text-white has-[:checked]:shadow-sm">
+                      <input checked class="sr-only peer" name="ambience" type="radio" value="sala-principal">
+                      <div class="flex items-center justify-between w-full">
+                        <span class="font-label-lg text-label-lg">Sala Principal</span>
+                        <span class="material-symbols-outlined text-[18px]">chair</span>
+                      </div>
+                      <span class="font-body-sm text-body-sm opacity-80 mt-1">Acogedora, luz tenue &amp; música
+                        suave</span>
+                    </label>
+
+                    <label
+                      class="relative flex flex-col p-space-sm bg-surface-container-low hover:bg-surface-container rounded-lg cursor-pointer transition-all space-selection has-[:checked]:bg-[#5c3826] has-[:checked]:text-white has-[:checked]:shadow-sm">
+                      <input class="sr-only peer" name="ambience" type="radio" value="patio-arbolado">
+                      <div class="flex items-center justify-between w-full">
+                        <span class="font-label-lg text-label-lg">Patio Arbolado</span>
+                        <span class="material-symbols-outlined text-[18px]">yard</span>
+                      </div>
+                      <span class="font-body-sm text-body-sm opacity-80 mt-1">Luz natural &amp; vegetación
+                        frondosa</span>
+                    </label>
+
+                    <label
+                      class="relative flex flex-col p-space-sm bg-surface-container-low hover:bg-surface-container rounded-lg cursor-pointer transition-all space-selection has-[:checked]:bg-[#5c3826] has-[:checked]:text-white has-[:checked]:shadow-sm">
+                      <input class="sr-only peer" name="ambience" type="radio" value="barra-especialidad">
+                      <div class="flex items-center justify-between w-full">
+                        <span class="font-label-lg text-label-lg">Barra de Especialidad</span>
+                        <span class="material-symbols-outlined text-[18px]">coffee_maker</span>
+                      </div>
+                      <span class="font-body-sm text-body-sm opacity-80 mt-1">Experiencia barista &amp; métodos
+                        manuales</span>
+                    </label>
+
+                    <label
+                      class="relative flex flex-col p-space-sm bg-surface-container-low hover:bg-surface-container rounded-lg cursor-pointer transition-all space-selection has-[:checked]:bg-[#5c3826] has-[:checked]:text-white has-[:checked]:shadow-sm">
+                      <input class="sr-only peer" name="ambience" type="radio" value="rincon-cowork">
+                      <div class="flex items-center justify-between w-full">
+                        <span class="font-label-lg text-label-lg">Rincón de Lectura</span>
+                        <span class="material-symbols-outlined text-[18px]">menu_book</span>
+                      </div>
+                      <span class="font-body-sm text-body-sm opacity-80 mt-1">Silencio productivo con tomas de
+                        corriente</span>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- 2. Date Visual Selector & Time of Day -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+                  <!-- Visual Date Chooser -->
+                  <div class="space-y-space-xs">
+                    <div class="flex items-center justify-between">
+                      <label class="font-label-lg text-label-lg text-primary block">
+                        2. Fecha del Encuentro
+                      </label>
+                      <div id="selected-date-display"></div>
+                    </div>
+                    <div class="p-space-sm bg-surface-container-low rounded-lg border border-outline-variant/30"
+                      id="calendar-container">
+                      <div class="flex items-center justify-between mb-space-xs px-1">
+                        <span class="font-label-md text-label-md text-primary font-semibold tracking-wide capitalize"
+                          id="calendar-month-year">Septiembre 2026</span>
+                        <div class="flex items-center gap-1 text-on-surface-variant">
+                          <button
+                            class="p-1 rounded hover:bg-surface-container text-primary transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+                            id="cal-prev-month" type="button" aria-label="Mes anterior">
+                            <span class="material-symbols-outlined text-[18px]">chevron_left</span>
+                          </button>
+                          <button
+                            class="p-1 rounded hover:bg-surface-container text-primary transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+                            id="cal-next-month" type="button" aria-label="Mes siguiente">
+                            <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="grid grid-cols-7 gap-1 text-center font-label-sm text-label-sm" id="calendar-grid">
+                        <!-- Rendered dynamically by js/reservas.js -->
+                      </div>
+                      <input type="hidden" name="selected_date" id="selected-date-input" value="">
+                    </div>
+                  </div>
+
+                  <!-- Time / Turn Slot -->
+                  <div class="space-y-space-xs">
+                    <label class="font-label-lg text-label-lg text-primary block">
+                      3. Turno &amp; Horario
+                    </label>
+                    <div class="space-y-space-xs">
+                      <div>
+                        <span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1 mb-1">
+                          <span class="material-symbols-outlined text-[14px]">wb_twilight</span> Desayuno &amp; Primer
+                          Vuelo
+                        </span>
+                        <div class="grid grid-cols-3 gap-1">
+                          <button
+                            class="time-slot py-1.5 text-center text-label-md font-label-md rounded bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors"
+                            type="button">08:30</button>
+                          <button
+                            class="time-slot active-time py-1.5 text-center text-label-md font-label-md rounded bg-[#5c3826] text-white font-semibold shadow-sm transition-colors"
+                            type="button">09:30</button>
+                          <button
+                            class="time-slot py-1.5 text-center text-label-md font-label-md rounded bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors"
+                            type="button">11:00</button>
+                        </div>
+                      </div>
+                      <div>
+                        <span
+                          class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1 mb-1 pt-1">
+                          <span class="material-symbols-outlined text-[14px]">sunny</span> Almuerzo de Masa Madre
+                        </span>
+                        <div class="grid grid-cols-3 gap-1">
+                          <button
+                            class="time-slot py-1.5 text-center text-label-md font-label-md rounded bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors"
+                            type="button">12:30</button>
+                          <button
+                            class="time-slot py-1.5 text-center text-label-md font-label-md rounded bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors"
+                            type="button">13:45</button>
+                          <button
+                            class="time-slot py-1.5 text-center text-label-md font-label-md rounded bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors"
+                            type="button">14:30</button>
+                        </div>
+                      </div>
+                      <div>
+                        <span
+                          class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1 mb-1 pt-1">
+                          <span class="material-symbols-outlined text-[14px]">bakery_dining</span> Merienda de Autor
+                        </span>
+                        <div class="grid grid-cols-3 gap-1">
+                          <button
+                            class="time-slot py-1.5 text-center text-label-md font-label-md rounded bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors"
+                            type="button">16:30</button>
+                          <button
+                            class="time-slot py-1.5 text-center text-label-md font-label-md rounded bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors"
+                            type="button">17:45</button>
+                          <button
+                            class="time-slot py-1.5 text-center text-label-md font-label-md rounded bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors"
+                            type="button">19:00</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3. Number of People -->
+                <div class="space-y-space-xs">
+                  <div class="flex items-center justify-between">
+                    <label class="font-label-lg text-label-lg text-primary">
+                      4. Cantidad de Personas
+                    </label>
+                    <span class="font-label-sm text-label-sm text-on-surface-variant">Para +8 personas contactar
+                      directo</span>
+                  </div>
+                  <div class="grid grid-cols-8 gap-1.5">
+                    <button
+                      class="pax-btn py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-primary font-label-lg text-label-lg transition-colors font-cooper"
+                      type="button">1</button>
+                    <button
+                      class="pax-btn active-pax py-2 rounded-lg bg-[#5c3826] text-white font-label-lg text-label-lg transition-colors font-cooper shadow-sm"
+                      type="button">2</button>
+                    <button
+                      class="pax-btn py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-primary font-label-lg text-label-lg transition-colors font-cooper"
+                      type="button">3</button>
+                    <button
+                      class="pax-btn py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-primary font-label-lg text-label-lg transition-colors font-cooper"
+                      type="button">4</button>
+                    <button
+                      class="pax-btn py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-primary font-label-lg text-label-lg transition-colors font-cooper"
+                      type="button">5</button>
+                    <button
+                      class="pax-btn py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-primary font-label-lg text-label-lg transition-colors font-cooper"
+                      type="button">6</button>
+                    <button
+                      class="pax-btn py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-primary font-label-lg text-label-lg transition-colors font-cooper"
+                      type="button">7</button>
+                    <button
+                      class="pax-btn py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-primary font-label-lg text-label-lg transition-colors font-cooper"
+                      type="button">8</button>
+                  </div>
+                </div>
+
+                <!-- 4. Contact Details -->
+                <div class="space-y-space-sm pt-space-xs">
+                  <label class="font-label-lg text-label-lg text-primary block">
+                    5. Tus Datos de Contacto
+                  </label>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+                    <div>
+                      <span class="font-label-sm text-label-sm text-on-surface-variant block mb-1">Nombre y
+                        Apellido</span>
+                      <div class="relative">
+                        <span
+                          class="material-symbols-outlined text-[18px] text-outline absolute left-3 top-3">badge</span>
+                        <input
+                          class="w-full pl-9 pr-3 py-2.5 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary/30 transition-all"
+                          placeholder="Clara Peña" required type="text">
+                      </div>
+                    </div>
+                    <div>
+                      <span class="font-label-sm text-label-sm text-on-surface-variant block mb-1">Teléfono Móvil</span>
+                      <div class="relative">
+                        <span
+                          class="material-symbols-outlined text-[18px] text-outline absolute left-3 top-3">phone</span>
+                        <input
+                          class="w-full pl-9 pr-3 py-2.5 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary/30 transition-all"
+                          placeholder="+54 11 9876-5432" required type="tel">
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="font-label-sm text-label-sm text-on-surface-variant block mb-1">Correo Electrónico
+                      (para confirmar tu reserva)</span>
+                    <div class="relative">
+                      <span
+                        class="material-symbols-outlined text-[18px] text-outline absolute left-3 top-3">alternate_email</span>
+                      <input
+                        class="w-full pl-9 pr-3 py-2.5 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary/30 transition-all"
+                        placeholder="clara.pena@ejemplo.com" required type="email">
+                    </div>
+                  </div>
+                  <div>
+                    <span class="font-label-sm text-label-sm text-on-surface-variant block mb-1">Comentarios Especiales
+                      (Alergias, celebración, cochecito de bebé)</span>
+                    <textarea
+                      class="w-full p-3 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary/30 transition-all"
+                      placeholder="¿Vienes por un aniversario? ¿Necesitas espacio para carrito o silla de ruedas?"
+                      rows="2"></textarea>
+                  </div>
+                </div>
+
+                <!-- Submit CTA -->
+                <div class="pt-space-sm">
+                  <button
+                    class="w-full py-space-sm px-space-lg bg-secondary hover:bg-primary-container text-on-secondary font-label-lg text-label-lg rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-space-sm"
+                    type="submit">
+                    <span class="material-symbols-outlined text-[20px]">event_available</span>
+                    <span>Confirmar Solicitud de Reserva</span>
+                  </button>
+                  <p class="text-center font-label-sm text-label-sm text-outline mt-2">
+                    Recibirás confirmación automática vía email y recordatorio por WhatsApp 2 horas antes.
+                  </p>
+                </div>
+              </form>
+
+              <!-- Interactive Toast Confirmation Box (Hidden initially) -->
+              <div
+                class="hidden mt-space-md p-space-md bg-surface-container text-primary rounded-xl flex items-start gap-space-sm border border-secondary/30"
+                id="booking-toast">
+                <span class="material-symbols-outlined text-[24px] text-secondary">check_circle</span>
+                <div>
+                  <p class="font-headline-sm text-headline-sm text-primary">¡Mesa Pre-Reservada!</p>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Hemos enviado los detalles a tu
+                    casilla. Nos vemos pronto con una taza de origen lista para ti.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- RIGHT COLUMN: Location, Schedules & Amenities (5 Cols) -->
+            <div class="lg:col-span-5 space-y-space-md">
+              <!-- Location & Stylized Map Card -->
+              <div class="bg-surface-container-lowest rounded-xl p-space-md shadow-md space-y-space-sm">
+                <div class="flex items-center justify-between">
+                  <span
+                    class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Ubicación</span>
+                  <span
+                    class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary bg-surface-container px-2 py-0.5 rounded-full border border-secondary/20">
+                    <span class="material-symbols-outlined text-[13px]">near_me</span> Polanco IV Secc
+                  </span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-primary">Alejandro Dumas 81</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant -mt-1">
+                  En el corazón de Polanco, Polanco IV Secc. Fácil acceso peatonal y ciclovía cercana.
+                </p>
+
+                <!-- Map View Container with Interactive Google Maps Embed -->
+                <div
+                  class="w-full h-64 bg-surface-container rounded-xl overflow-hidden relative shadow-sm border border-outline-variant/30">
+                  <iframe title="Mapa de Ubicación - La Frescurita en Polanco" class="w-full h-full border-0"
+                    loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
+                    src="https://maps.google.com/maps?q=Alejandro+Dumas+81,+Polanco,+Polanco+IV+Secc,+CDMX&t=&z=16&ie=UTF8&iwloc=&output=embed">
+                  </iframe>
+                  <!-- Floating Direct Link Button -->
+                  <div class="absolute bottom-2.5 right-2.5 z-10">
+                    <a class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-surface/95 backdrop-blur-md hover:bg-surface text-primary border border-outline-variant/40 rounded-lg font-label-sm text-label-sm font-semibold shadow-md hover:shadow-lg transition-all"
+                      href="https://www.google.com/maps/search/?api=1&query=Alejandro+Dumas+81,+Polanco,+Polanco+IV+Secc,+CDMX"
+                      rel="noopener noreferrer" target="_blank">
+                      <span class="material-symbols-outlined text-[15px] text-secondary">map</span>
+                      <span>Abrir en Google Maps</span>
+                      <span class="material-symbols-outlined text-[13px] text-outline">open_in_new</span>
+                    </a>
+                  </div>
+                </div>
+
+                <div
+                  class="flex items-center justify-between pt-space-xs font-label-sm text-label-sm text-on-surface-variant">
+                  <span class="flex items-center gap-1"><span
+                      class="material-symbols-outlined text-[16px] text-secondary">subway</span> Metro Polanco /
+                    Auditorio</span>
+                  <span class="flex items-center gap-1"><span
+                      class="material-symbols-outlined text-[16px] text-secondary">pedal_bike</span> Ecobici
+                    cercana</span>
+                </div>
+              </div>
+
+              <!-- Schedule Detailed Card -->
+              <div class="bg-surface-container-low rounded-xl p-space-md shadow-sm space-y-space-sm">
+                <div class="flex items-center gap-space-xs text-primary font-headline-sm text-headline-sm">
+                  <span class="material-symbols-outlined text-secondary text-[22px]">schedule</span>
+                  <h3>Horarios de Atención</h3>
+                </div>
+                <div class="space-y-space-xs text-body-sm font-body-sm">
+                  <div class="flex justify-between items-center py-1">
+                    <span class="text-on-surface font-medium">Lunes a Viernes</span>
+                    <div class="text-right">
+                      <p class="text-primary font-semibold">07:30 — 20:00 hs</p>
+                      <p class="text-on-surface-variant text-[12px]">Cocina cierra a las 19:15 hs</p>
+                    </div>
+                  </div>
+                  <div class="flex justify-between items-center py-1">
+                    <span class="text-on-surface font-medium">Sábados y Feriados</span>
+                    <div class="text-right">
+                      <p class="text-primary font-semibold">08:30 — 21:00 hs</p>
+                      <p class="text-on-surface-variant text-[12px]">Brunch de autor todo el día</p>
+                    </div>
+                  </div>
+                  <div class="flex justify-between items-center py-1">
+                    <span class="text-on-surface font-medium">Domingos</span>
+                    <div class="text-right">
+                      <p class="text-primary font-semibold">08:30 — 20:00 hs</p>
+                      <p class="text-on-surface-variant text-[12px]">Sesión de cata abierta 17 hs</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Amenities & Perks -->
+              <div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+                <h4 class="font-label-lg text-label-lg text-primary mb-space-sm font-semibold">
+                  Comodidades para tu estadía
+                </h4>
+                <div class="grid grid-cols-2 gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+                  <div class="flex items-center gap-space-xs">
+                    <div
+                      class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+                      <span class="material-symbols-outlined text-[18px]">wifi</span>
+                    </div>
+                    <span>Fibra 500 MB</span>
+                  </div>
+                  <div class="flex items-center gap-space-xs">
+                    <div
+                      class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+                      <span class="material-symbols-outlined text-[18px]">pets</span>
+                    </div>
+                    <span>100% Pet Friendly</span>
+                  </div>
+                  <div class="flex items-center gap-space-xs">
+                    <div
+                      class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+                      <span class="material-symbols-outlined text-[18px]">accessible</span>
+                    </div>
+                    <span>Acceso accesible</span>
+                  </div>
+                  <div class="flex items-center gap-space-xs">
+                    <div
+                      class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+                      <span class="material-symbols-outlined text-[18px]">eco</span>
+                    </div>
+                    <span>Vegano &amp; Sin Gluten</span>
+                  </div>
+                  <div class="flex items-center gap-space-xs">
+                    <div
+                      class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+                      <span class="material-symbols-outlined text-[18px]">power</span>
+                    </div>
+                    <span>Tomas en todas las mesas</span>
+                  </div>
+                  <div class="flex items-center gap-space-xs">
+                    <div
+                      class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+                      <span class="material-symbols-outlined text-[18px]">air</span>
+                    </div>
+                    <span>Patio ventilado</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION: Photo Mosaic of the Space -->
+        <section class="w-full bg-surface-container-low py-space-xl">
+          <div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin">
+            <div class="flex flex-col md:flex-row md:items-end justify-between pb-space-lg gap-space-sm">
+              <div>
+                <span
+                  class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Atmósfera
+                  &amp; Detalles</span>
+                <h2 class="font-headline-lg text-headline-lg text-primary">Un Recorrido por Nuestros Espacios</h2>
+              </div>
+              <p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+                Maderas recuperadas de demolición, cerámica modelada en torno por artistas locales y luz natural
+                tamizada por jazmines.
+              </p>
+            </div>
+
+            <!-- Curated Bento Photo Gallery -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-space-md">
+              <!-- Main Bar Spotlight -->
+              <div class="md:col-span-7 group relative h-80 rounded-xl overflow-hidden shadow-md">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  alt="Barra de extracción manual de café de especialidad"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAoF7cojhBNfFrg9sMA7BYb5Go8ByCnsKAFSPa6wldLuZEwRNOFERhoYJqRWs9V969_tkutHJMu5iq2Dd8R7yKczCpLUHaMKbzUQweoI8wkpc7XHcfpCeDTgsQFcH7ggjjW2Msm7xLiMtlHX__oqol2QOC4lEe7d58n5jRz_lUFMf7EIKi8wpwO7kbw9oYbF8vGeWEeCbE3WBnmFU2SzPA5aBPTwUJACHAt_xBYsKW8QAEZH9wgozf">
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent flex flex-col justify-end p-space-md text-surface">
+                  <span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed">El
+                    Corazón</span>
+                  <h3 class="font-headline-sm text-headline-sm font-cooper">La Barra de Extracción Manual</h3>
+                  <p class="font-body-sm text-body-sm opacity-85">Filtros V60, Chemex y Espresso de origen único
+                    calibrado diariamente.</p>
+                </div>
+              </div>
+
+              <!-- Leafy Courtyard -->
+              <div class="md:col-span-5 group relative h-80 rounded-xl overflow-hidden shadow-md">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  alt="Patio arbolado luminoso"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7u11TxIMgQEn8nURWoBDX8rjLI4Fl3kVArhu6hBJ41IZxAVJeeNnJEix4BQNZLhQAh4BKrRMOQmvwUfUCfAX_j-sVKf_1Bq4zj3ID1HqFrj_jpWSvGuCLmsI_hE5p6fR1hEqE2Ov8gh4UJdgR7zm_PyBsvvkVLqiZ2JF1NU4UVJuPDh1XK3Nf1HfqphaBPLTbNRdzUZdqLT_oVXzVvazvW9vdzL94sI2gXv8UXG5kGLCpHtueDKKo">
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent flex flex-col justify-end p-space-md text-surface">
+                  <span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed">Aire
+                    Fresco</span>
+                  <h3 class="font-headline-sm text-headline-sm font-cooper">El Patio Arbolado</h3>
+                  <p class="font-body-sm text-body-sm opacity-85">Mesas bajo la sombra natural de magnolias y jazmines
+                    paraguayos.</p>
+                </div>
+              </div>
+
+              <!-- Quiet Nook / Cowork -->
+              <div class="md:col-span-4 group relative h-64 rounded-xl overflow-hidden shadow-md">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  alt="Rincón de lectura acogedor"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_BqdP53kJRVFilXtpB4n9TJEBiga-yFkAnNNZE7nkYUD4TEDsVFGRMLyzJ83p6Z5WGCAuDXZXxCWcgoojslle9xz9C0V5uHJ8dnQnJRvhlHPyOnJGp8qirySJGvhPtEjWGgqvmjSCC26BhqNjB-anefzODiFmMKErQws7JenovX8n-WLtWfNJc593Ix9VeSiLDb9U9HlIQs_agSA9krDVVVVFAeo_RbbEMrfPOboAX-8wQmrSdJ69">
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex flex-col justify-end p-space-md text-surface">
+                  <h4 class="font-headline-sm text-headline-sm text-lg">Rincón de Lectura</h4>
+                  <p class="font-body-sm text-body-sm opacity-85">Tranquilidad para sumergirse en un buen libro.</p>
+                </div>
+              </div>
+
+              <!-- Artisanal Ceramics Detail -->
+              <div class="md:col-span-4 group relative h-64 rounded-xl overflow-hidden shadow-md">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  alt="Vajilla de cerámica artesanal torneada a mano"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3s4NCF6X5as_NQ76JBmXip75dUqXAk3MbjyCwzd8Humv3xNgt4PI8PTfnLS-lWAxJnlPfVG6lkyanGn0NexHS4Jr1-aqRzdYknZFflTaSCi_h7IzvTKV-KVoMUQM5eAyMKnavE7JDOKVvfBM_YXjh9X79qbROFLAngTiucUaMiBblKORJA3HXra-0fHmV04CEjalRaslxIB_f-Q4bzVtFZSeV2Wm2Hj16S6olLR-UdxnMtIaZWiZm">
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex flex-col justify-end p-space-md text-surface">
+                  <h4 class="font-headline-sm text-headline-sm text-lg">Cerámica Torneada a Mano</h4>
+                  <p class="font-body-sm text-body-sm opacity-85">Cada taza es una pieza única de alfarería local.</p>
+                </div>
+              </div>
+
+              <!-- Roasting Workshop View -->
+              <div class="md:col-span-4 group relative h-64 rounded-xl overflow-hidden shadow-md">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  alt="Tambor de tostaduría artesanal"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuZDS8vzPnzGOlRiKKNCxY7pndvbgLjsk7wu68xzCYoPWfERfJl5uW9u7ShMAx8Gjdd0xKNCGYf861sXRzTZMy4u3iE5a5S2CyIxKBv9VkI3d96xY8jnS2u2f0hrXQzDUDD7aNIIuBTee1ONMz8O_cXB3w3kiGvObMGSI0cGYtJL0BX8C4US-IMQNKlgpeDxY3jXukU3ThJZqNK12MBzhbld06eotEgJdDO_J8-ctmoNg8c1nLkdkC">
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex flex-col justify-end p-space-md text-surface">
+                  <h4 class="font-headline-sm text-headline-sm text-lg">El Tambor de Tueste</h4>
+                  <p class="font-body-sm text-body-sm opacity-85">Lotes pequeños tostados a la vista del público.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION: Frequently Asked Questions (Interactive Accordion) -->
+        <section class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin py-space-xl">
+          <div class="max-w-3xl mx-auto">
+            <div class="text-center pb-space-lg">
+              <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Claridad
+                &amp; Hospitalidad</span>
+              <h2 class="font-headline-lg text-headline-lg text-primary mt-1">Preguntas Frecuentes</h2>
+              <p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">
+                Todo lo que necesitas saber antes de acercarte a compartir una taza con nosotros.
+              </p>
+            </div>
+
+            <div class="space-y-space-sm" id="faq-accordion">
+              <!-- FAQ Item 1 -->
+              <div class="bg-surface-container-low rounded-xl overflow-hidden transition-all shadow-sm">
+                <button
+                  class="faq-toggle w-full p-space-md text-left flex items-center justify-between gap-space-md focus:outline-none"
+                  type="button">
+                  <span class="font-headline-sm text-headline-sm text-primary text-base">¿Aceptan mascotas en el salón y
+                    patio?</span>
+                  <span
+                    class="material-symbols-outlined text-secondary transform transition-transform duration-200">expand_more</span>
+                </button>
+                <div class="faq-content px-space-md pb-space-md text-body-sm font-body-sm text-on-surface-variant">
+                  ¡Absolutamente! Somos 100% pet-friendly en todo el patio arbolado y en las mesas frontales de la sala
+                  principal. Contamos con bebederos de agua fresca filtrada y galletas horneadas de masa madre aptas
+                  para caninos de cortesía.
+                </div>
+              </div>
+
+              <!-- FAQ Item 2 -->
+              <div class="bg-surface-container-low rounded-xl overflow-hidden transition-all shadow-sm">
+                <button
+                  class="faq-toggle w-full p-space-md text-left flex items-center justify-between gap-space-md focus:outline-none"
+                  type="button">
+                  <span class="font-headline-sm text-headline-sm text-primary text-base">¿Tienen opciones sin lácteos y
+                    alternativas celíacas?</span>
+                  <span
+                    class="material-symbols-outlined text-secondary transform transition-transform duration-200">expand_more</span>
+                </button>
+                <div
+                  class="faq-content hidden px-space-md pb-space-md text-body-sm font-body-sm text-on-surface-variant">
+                  Sí. Para el café ofrecemos leche de almendras casera emulsionada, leche de avena barista sin azúcar
+                  añadida y leche deslactosada. En pastelería tenemos opciones veganas y una línea exclusiva sin gluten
+                  empaquetada en origen para evitar cualquier tipo de contaminación cruzada.
+                </div>
+              </div>
+
+              <!-- FAQ Item 3 -->
+              <div class="bg-surface-container-low rounded-xl overflow-hidden transition-all shadow-sm">
+                <button
+                  class="faq-toggle w-full p-space-md text-left flex items-center justify-between gap-space-md focus:outline-none"
+                  type="button">
+                  <span class="font-headline-sm text-headline-sm text-primary text-base">¿Se puede reservar el espacio
+                    completo para eventos privados o catas corporativas?</span>
+                  <span
+                    class="material-symbols-outlined text-secondary transform transition-transform duration-200">expand_more</span>
+                </button>
+                <div
+                  class="faq-content hidden px-space-md pb-space-md text-body-sm font-body-sm text-on-surface-variant">
+                  Sí, organizamos talleres de barismo guiados, catas sensoriales para empresas y cumpleaños íntimos
+                  después del horario comercial (a partir de las 20:30 hs) o los lunes por la mañana. Puedes escribirnos
+                  a <strong class="text-primary font-semibold">eventos@lafrescurita.com</strong> para recibir el
+                  catálogo de experiencias.
+                </div>
+              </div>
+
+              <!-- FAQ Item 4 -->
+              <div class="bg-surface-container-low rounded-xl overflow-hidden transition-all shadow-sm">
+                <button
+                  class="faq-toggle w-full p-space-md text-left flex items-center justify-between gap-space-md focus:outline-none"
+                  type="button">
+                  <span class="font-headline-sm text-headline-sm text-primary text-base">¿Cuánto tiempo se guarda la
+                    mesa en caso de retraso?</span>
+                  <span
+                    class="material-symbols-outlined text-secondary transform transition-transform duration-200">expand_more</span>
+                </button>
+                <div
+                  class="faq-content hidden px-space-md pb-space-md text-body-sm font-body-sm text-on-surface-variant">
+                  Mantenemos tu rincón reservado durante <strong class="text-primary">15 minutos</strong> de cortesía.
+                  Si prevés una demora mayor, puedes avisarnos con un mensaje rápido al WhatsApp de Mesa Directa para
+                  conservarte la ubicación sin inconvenientes.
+                </div>
+              </div>
+            </div>
+
+            <!-- Assistance Contact Box -->
+            <div
+              class="mt-space-lg p-space-md bg-surface-container rounded-xl flex flex-col sm:flex-row items-center justify-between gap-space-sm text-center sm:text-left">
+              <div class="flex items-center gap-space-sm">
+                <div
+                  class="w-10 h-10 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-[20px]">support_agent</span>
+                </div>
+                <div>
+                  <p class="font-label-lg text-label-lg text-primary">¿Tienes un requerimiento especial?</p>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">Escríbenos directamente y nuestro barista
+                    de turno responderá en minutos.</p>
+                </div>
+              </div>
+              <a class="px-space-md py-2 bg-primary text-on-primary rounded-lg font-label-md text-label-md hover:bg-secondary transition-colors shrink-0"
+                href="tel:+541148213902">
+                Llamar al Salón
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Reusable Footer Component -->
+  <div id="site-footer"></div>
+
+  <!-- Core & Page Specific JavaScript -->
+  <script src="js/main.js"></script>
+  <script src="js/reservas.js"></script>
+</body>
+
+</html>

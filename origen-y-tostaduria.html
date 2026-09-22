@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Frescurita Café</title>
+  <meta name="description"
+    content="Nuestros granos de especialidad de comercio directo, fincas asociadas en Huila, Yirgacheffe y Antigua, y talleres de cata sensorial.">
+  <!-- Favicon / Tab Icon from resources -->
+  <link rel="apple-touch-icon" sizes="180x180" href="resources/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="resources/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="resources/favicon_io/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="resources/favicon_io/favicon.ico">
+  <link rel="shortcut icon" href="resources/favicon_io/favicon.ico">
+  <link rel="manifest" href="resources/favicon_io/site.webmanifest">
+
+  <!-- Adobe Typekit & Google Fonts / Material Symbols -->
+  <link rel="stylesheet" href="https://use.typekit.net/ojm0owy.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Tailwind CDN & Config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/tailwind-config.js"></script>
+</head>
+
+<body
+  class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+
+  <!-- Reusable Header Component -->
+  <div id="site-header"></div>
+
+
+  <!-- Main Content -->
+  <main class="w-full pt-28 bg-surface min-h-[calc(100vh-200px)]">
+    <div class="flex flex-col w-full">
+
+      <!-- Editorial Hero Section -->
+      <section
+        class="w-full bg-surface border-b border-outline-variant/50 pt-space-xl pb-space-lg lg:pt-space-xl lg:pb-space-xl px-margin-mobile lg:px-margin">
+        <div class="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+          <div class="lg:col-span-7 flex flex-col gap-space-md">
+            <div
+              class="inline-flex items-center gap-space-xs bg-[#f4ede0] text-[#5c3826] border border-[#5c3826]/20 px-space-md py-1 rounded-full w-fit">
+              <span class="material-symbols-outlined text-[16px]">coffee</span>
+              <span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Sobre nosotros</span>
+            </div>
+            <h2
+              class="font-headline-xl lg:font-display-lg text-headline-xl lg:text-display-lg text-primary tracking-tight font-recoleta">
+              Más que café, <br class="hidden sm:block"><span
+                class="italic font-normal text-secondary font-recoleta">una experiencia</span>
+            </h2>
+            <div
+              class="flex flex-col gap-space-sm max-w-2xl font-body-xl text-body-xl text-on-surface-variant leading-relaxed">
+              <p>En La Frescura creemos que un buen café puede transformar cualquier momento. Creamos un espacio cálido
+                y agradable donde puedes comenzar tu día, reunirte con amigos o simplemente darte un momento para ti.
+              </p>
+              <p class="text-body-md font-body-md text-on-surface-variant/90">Seleccionamos nuestros ingredientes
+                pensando en ofrecerte bebidas y alimentos preparados con dedicación, calidad y mucho sabor.</p>
+            </div>
+            <div class="flex items-center gap-space-lg pt-space-xs">
+              <div class="flex items-center gap-2 text-secondary font-label-md">
+                <span class="material-symbols-outlined text-[20px]">favorite</span>
+                <span>Pasión &amp; Calidez</span>
+              </div>
+              <div class="w-1 h-1 rounded-full bg-outline-variant"></div>
+              <div class="flex items-center gap-2 text-secondary font-label-md">
+                <span class="material-symbols-outlined text-[20px]">award_star</span>
+                <span>Calidad Artesanal</span>
+              </div>
+              <div class="w-1 h-1 rounded-full bg-outline-variant"></div>
+              <div class="flex items-center gap-2 text-secondary font-label-md">
+                <span class="material-symbols-outlined text-[20px]">spa</span>
+                <span>Origen Responsable</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="lg:col-span-5 flex flex-col justify-center bg-surface-container-low p-space-lg lg:p-space-xl rounded-3xl border border-[#d8cbb8]/60 shadow-sm relative overflow-hidden">
+            <div class="flex items-center gap-space-sm mb-space-sm text-secondary">
+              <span class="material-symbols-outlined text-[28px]">format_quote</span>
+              <span class="font-label-sm text-label-sm uppercase tracking-widest font-semibold">Nuestra Filosofía</span>
+            </div>
+            <blockquote
+              class="font-headline-sm text-headline-sm text-primary italic leading-snug mb-space-md font-serif">
+              «Un refugio de aromas puros, granos selectos y hospitalidad genuina en cada servicio.»
+            </blockquote>
+            <div class="flex items-center gap-space-sm pt-space-sm border-t border-outline-variant/40">
+              <div
+                class="w-10 h-10 rounded-full bg-[#5c3826] text-white flex items-center justify-center font-cooper text-[14px]">
+                LF</div>
+              <div>
+                <p class="font-label-md text-label-md text-primary font-semibold">La Frescurita Café</p>
+                <p class="font-label-sm text-label-sm text-on-surface-variant">Tostaduría de Autor &amp; Espacio de
+                  Encuentro</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Traceability Banner -->
+      <section
+        class="relative w-full overflow-hidden bg-surface-container-low px-margin-mobile lg:px-margin py-space-xl lg:py-28">
+        <div class="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+          <div class="lg:col-span-7 flex flex-col gap-space-md">
+            <div
+              class="inline-flex items-center gap-space-xs bg-[#f4ede0] text-[#5c3826] border border-[#5c3826]/20 px-space-md py-1.5 rounded-full w-fit">
+              <span class="material-symbols-outlined text-[16px]">psychiatry</span>
+              <span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Trazabilidad &amp; Lotes
+                de Especialidad</span>
+            </div>
+            <h1
+              class="font-headline-xl lg:font-display-lg text-headline-xl lg:text-display-lg text-primary tracking-tight font-recoleta hero-headline">
+              Del Cultivo a la Taza: <br class="hidden lg:block"><span
+                class="italic font-normal text-secondary font-recoleta">Nuestra Pasión por el Origen</span>
+            </h1>
+            <p class="font-body-xl text-body-xl text-on-surface-variant max-w-xl leading-relaxed">
+              Trabajamos mano a mano con pequeños productores para traer los perfiles de taza más extraordinarios del
+              mundo, respetando los ciclos de la tierra y ensalzando cada terroir en nuestro tambor artesanal.
+            </p>
+            <div class="flex flex-wrap items-center gap-space-lg pt-space-sm">
+              <div class="flex items-center gap-space-sm">
+                <span class="font-headline-lg text-headline-lg text-secondary font-cooper metric-number">100%</span>
+                <span
+                  class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider leading-snug">Granos
+                  Arábica<br>Puntaje 86+ SCA</span>
+              </div>
+              <div class="w-px h-10 bg-outline-variant/50 hidden sm:block"></div>
+              <div class="flex items-center gap-space-sm">
+                <span class="font-headline-lg text-headline-lg text-secondary font-cooper metric-number">&lt; 7</span>
+                <span
+                  class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider leading-snug">Días
+                  desde el<br>Tueste Solar</span>
+              </div>
+              <div class="w-px h-10 bg-outline-variant/50 hidden sm:block"></div>
+              <div class="flex items-center gap-space-sm">
+                <span class="font-headline-lg text-headline-lg text-secondary font-cooper metric-number">03</span>
+                <span
+                  class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider leading-snug">Micro-lotes<br>En
+                  Rotación</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 relative mt-space-lg lg:mt-0">
+            <div
+              class="relative rounded-2xl overflow-hidden shadow-xl bg-surface-container-high aspect-[4/5] max-h-[500px] w-full card-zoom">
+              <img class="w-full h-full object-cover" data-alt="Hands of coffee grower cupping beans"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBP3jedZJA6VcooSmKLzZUsrWGA6XYP_qzT-mzRS54PTOP7Wj-VLKNduTf-wHeZJ0lfHP6rorBk62XXOgZBtEQ1h6XGks-eu-ToQjOf8ZQS9ubJYhNl9DpV8SjhXL_37ytOfQPQFqnT_5vHzubh4TwTW_aT_c4cvGWPcPQ3oXG_Bmeh81gqhll69XCnR_P7Q-th7Nb26bijgtrOnLw2BFIXfC3oS9Bru1-FVFtrTrt0ZxZopNiZWW7U">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-primary-container/80 via-transparent to-transparent flex flex-col justify-end p-space-lg text-surface">
+                <span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-widest">Cosecha
+                  Seleccionada</span>
+                <p class="font-headline-sm text-headline-sm text-surface">Comercio Directo &amp; Relaciones de Confianza
+                </p>
+              </div>
+            </div>
+            <div
+              class="absolute -bottom-6 -left-6 bg-surface-container-lowest p-space-md rounded-xl shadow-lg hidden sm:flex items-center gap-space-sm max-w-xs border border-outline-variant/30">
+              <div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+                <span class="material-symbols-outlined text-[20px]">handshake</span>
+              </div>
+              <p class="font-body-sm text-body-sm text-on-surface-variant"><strong
+                  class="text-on-surface font-semibold">Precio Justo:</strong> Pagamos un 45% sobre el estándar de
+                mercado internacional.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive Fincas & Orígenes Section -->
+      <section
+        class="w-full max-w-[1280px] mx-auto px-margin-mobile lg:px-margin py-space-xl lg:py-28 flex flex-col gap-space-xl">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+          <div class="flex flex-col gap-space-xs max-w-2xl">
+            <span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-semibold">Cosecha de
+              Origen 2024</span>
+            <h2 class="font-headline-xl text-headline-xl text-primary tracking-tight">Micro-lotes en Tostaduría</h2>
+            <p class="font-body-md text-body-md text-on-surface-variant">
+              Cada café proviene de parcelas con altitud extrema y microclimas singulares. Explora las fichas
+              sensoriales de nuestros lotes en rotación activa.
+            </p>
+          </div>
+          <div class="flex items-center gap-space-sm self-start md:self-auto bg-surface-container p-1 rounded-xl">
+            <button
+              class="px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm transition-all"
+              id="viewAllBtn">Todos (3)</button>
+            <button
+              class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all"
+              id="viewColBtn">Colombia</button>
+            <button
+              class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all"
+              id="viewEthBtn">Etiopía</button>
+            <button
+              class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all"
+              id="viewGuaBtn">Guatemala</button>
+          </div>
+        </div>
+
+        <!-- 3 Detailed Coffee Technical Sheets -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+
+          <!-- Card 1: Finca El Paraíso -->
+          <article
+            class="coffee-card flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 card-zoom"
+            data-origin="colombia">
+            <div class="relative h-64 overflow-hidden bg-surface-container-high">
+              <img class="w-full h-full object-cover" data-alt="Lush green coffee tree branches in Cauca Colombia"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaLBaIiRUyNYgmnPrI588Eo6eSUdVwmQ6Q-JlbU-QQvz-8sLSIiB1tRetuT_q4Skbne0jyei50ra5RaRtxyrJQz1f8DnnCL3ywrgLZPrmZd5fTzuGyGfoY2yLdoHCtKBBHfgCsr7Nuxb1qdAhpPqe-DWUFUDxBW6aX8O8iMLdQ3hVx39NlSOpM-UEmUjcBWYWhTfq5jMeepWQDS6jPqYBBU3FXYl-OWw0gIvRLEFDH8BImeQpLgvvM">
+              <div
+                class="absolute top-4 left-4 bg-surface/90 backdrop-blur-sm px-3 py-1 rounded-full text-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">altitude</span> 1,950 msnm
+              </div>
+              <div
+                class="absolute top-4 right-4 bg-primary-container text-surface px-3 py-1 rounded-full font-label-sm text-label-sm">
+                Lote Exclusivo
+              </div>
+            </div>
+            <div class="p-space-lg flex flex-col flex-grow justify-between gap-space-lg">
+              <div class="flex flex-col gap-space-sm">
+                <div class="flex items-center justify-between">
+                  <span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-semibold">Cauca,
+                    Colombia</span>
+                  <span
+                    class="font-label-sm text-label-sm bg-[#f4ede0] text-[#5c3826] border border-[#5c3826]/20 px-2 py-0.5 rounded font-medium">Anaeróbico</span>
+                </div>
+                <h3 class="font-headline-lg text-headline-lg text-primary tracking-tight">Finca El Paraíso</h3>
+                <div class="flex flex-col gap-space-xs py-space-xs text-on-surface-variant font-body-sm text-body-sm">
+                  <div class="flex justify-between py-1 bg-surface-container-low px-2.5 rounded">
+                    <span class="text-outline">Variedad</span>
+                    <span class="font-semibold text-on-surface">Castillo &amp; Geisha</span>
+                  </div>
+                  <div class="flex justify-between py-1 px-2.5 rounded">
+                    <span class="text-outline">Proceso</span>
+                    <span class="font-semibold text-on-surface text-right">Doble fermentación anaeróbica</span>
+                  </div>
+                  <div class="flex justify-between py-1 bg-surface-container-low px-2.5 rounded">
+                    <span class="text-outline">Puntaje SCA</span>
+                    <span class="font-semibold text-secondary">89.5 Puntos</span>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-1.5 pt-space-xs">
+                  <span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Notas de
+                    Catación</span>
+                  <div class="flex flex-wrap gap-1.5">
+                    <span
+                      class="px-2.5 py-1 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm rounded-full">Frutos
+                      rojos</span>
+                    <span
+                      class="px-2.5 py-1 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm rounded-full">Jazmín</span>
+                    <span
+                      class="px-2.5 py-1 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm rounded-full">Miel
+                      de caña</span>
+                  </div>
+                </div>
+              </div>
+              <div class="pt-space-sm flex items-center justify-between bg-surface-container-low p-space-md rounded-xl">
+                <div class="flex flex-col">
+                  <span class="font-label-sm text-label-sm text-outline">Perfil</span>
+                  <span class="font-label-md text-label-md text-primary font-semibold">Floral &amp; Complejo</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <div class="flex flex-col items-center">
+                    <span class="text-[10px] text-outline">Acidez</span>
+                    <div class="w-8 h-1.5 bg-secondary rounded-full"></div>
+                  </div>
+                  <div class="flex flex-col items-center">
+                    <span class="text-[10px] text-outline">Cuerpo</span>
+                    <div class="w-8 h-1.5 bg-secondary-fixed-dim rounded-full"></div>
+                  </div>
+                  <div class="flex flex-col items-center">
+                    <span class="text-[10px] text-outline">Dulzura</span>
+                    <div class="w-8 h-1.5 bg-secondary rounded-full"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Valle de Yirgacheffe -->
+          <article
+            class="coffee-card flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 card-zoom"
+            data-origin="etiopia">
+            <div class="relative h-64 overflow-hidden bg-surface-container-high">
+              <img class="w-full h-full object-cover" data-alt="Drying beds in Yirgacheffe Ethiopia"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbur9X62NVJdwjgCQcl0EBlRjpRnH-XyXF9pangI43CyYUdstl5stRSqNjBECr222HjKb4k8MX2NMKSGWaxGxOUjWXurr1hX3tWInzyST-BlhuUls__MzzOwt5bKV837cLWP1zoUpmBKJAvniUwD0argASDbhIi5Cr7XUmxIk139Mq-PpmsyR5AzwrPMq6GPxi_AYf-bY5lwZgYP8RyDEMP4sNWQquv7F0tcQcDCk_79efn2jRZ7ZH">
+              <div
+                class="absolute top-4 left-4 bg-surface/90 backdrop-blur-sm px-3 py-1 rounded-full text-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">altitude</span> 2,100 msnm
+              </div>
+              <div
+                class="absolute top-4 right-4 bg-primary-container text-surface px-3 py-1 rounded-full font-label-sm text-label-sm">
+                Cosecha Silvestre
+              </div>
+            </div>
+            <div class="p-space-lg flex flex-col flex-grow justify-between gap-space-lg">
+              <div class="flex flex-col gap-space-sm">
+                <div class="flex items-center justify-between">
+                  <span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-semibold">Gedeo,
+                    Etiopía</span>
+                  <span
+                    class="font-label-sm text-label-sm bg-[#f4ede0] text-[#5c3826] border border-[#5c3826]/20 px-2 py-0.5 rounded font-medium">Lavado
+                    Puro</span>
+                </div>
+                <h3 class="font-headline-lg text-headline-lg text-primary tracking-tight">Valle de Yirgacheffe</h3>
+                <div class="flex flex-col gap-space-xs py-space-xs text-on-surface-variant font-body-sm text-body-sm">
+                  <div class="flex justify-between py-1 bg-surface-container-low px-2.5 rounded">
+                    <span class="text-outline">Variedad</span>
+                    <span class="font-semibold text-on-surface">Heirlooms silvestres</span>
+                  </div>
+                  <div class="flex justify-between py-1 px-2.5 rounded">
+                    <span class="text-outline">Proceso</span>
+                    <span class="font-semibold text-on-surface text-right">Lavado tradicional 72h</span>
+                  </div>
+                  <div class="flex justify-between py-1 bg-surface-container-low px-2.5 rounded">
+                    <span class="text-outline">Puntaje SCA</span>
+                    <span class="font-semibold text-secondary">91.0 Puntos</span>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-1.5 pt-space-xs">
+                  <span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Notas de
+                    Catación</span>
+                  <div class="flex flex-wrap gap-1.5">
+                    <span
+                      class="px-2.5 py-1 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm rounded-full">Bergamota</span>
+                    <span
+                      class="px-2.5 py-1 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm rounded-full">Té
+                      negro</span>
+                    <span
+                      class="px-2.5 py-1 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm rounded-full">Flores
+                      blancas</span>
+                  </div>
+                </div>
+              </div>
+              <div class="pt-space-sm flex items-center justify-between bg-surface-container-low p-space-md rounded-xl">
+                <div class="flex flex-col">
+                  <span class="font-label-sm text-label-sm text-outline">Perfil</span>
+                  <span class="font-label-md text-label-md text-primary font-semibold">Cítrico &amp; Sedoso</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <div class="flex flex-col items-center">
+                    <span class="text-[10px] text-outline">Acidez</span>
+                    <div class="w-8 h-1.5 bg-secondary rounded-full"></div>
+                  </div>
+                  <div class="flex flex-col items-center">
+                    <span class="text-[10px] text-outline">Cuerpo</span>
+                    <div class="w-8 h-1.5 bg-outline-variant rounded-full"></div>
+                  </div>
+                  <div class="flex flex-col items-center">
+                    <span class="text-[10px] text-outline">Dulzura</span>
+                    <div class="w-8 h-1.5 bg-secondary rounded-full"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Antigua Highlands -->
+          <article
+            class="coffee-card flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 card-zoom"
+            data-origin="guatemala">
+            <div class="relative h-64 overflow-hidden bg-surface-container-high">
+              <img class="w-full h-full object-cover" data-alt="Farmer raking coffee cherries in Antigua Guatemala"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuACZx4lnOjA44RuuZklTpoCO8ohF3s_AjB9PD_KqdsXn2DRiOxmlekOzmUJ-BK88_w1tpeSLZkzwgQLYbCmR_KnUipzWBvV-5kGir_EIXZB0rqTT0NUgtAkeWFVxN9iZSwRiXIU8fbs8kcsdd0yyWZHbbOEDMQcyYstWaxq1wdoIbE4377-QEQVjUHsOY2U0AlgIqwHG9yRIeLQ4J9r6UcyD4CBniMiSUvhHd9c27-A1wpq9x0XdraI">
+              <div
+                class="absolute top-4 left-4 bg-surface/90 backdrop-blur-sm px-3 py-1 rounded-full text-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">altitude</span> 1,700 msnm
+              </div>
+              <div
+                class="absolute top-4 right-4 bg-primary-container text-surface px-3 py-1 rounded-full font-label-sm text-label-sm">
+                Suelo Volcánico
+              </div>
+            </div>
+            <div class="p-space-lg flex flex-col flex-grow justify-between gap-space-lg">
+              <div class="flex flex-col gap-space-sm">
+                <div class="flex items-center justify-between">
+                  <span
+                    class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-semibold">Antigua,
+                    Guatemala</span>
+                  <span
+                    class="font-label-sm text-label-sm bg-[#f4ede0] text-[#5c3826] border border-[#5c3826]/20 px-2 py-0.5 rounded font-medium">Natural
+                    Lento</span>
+                </div>
+                <h3 class="font-headline-lg text-headline-lg text-primary tracking-tight">Antigua Highlands</h3>
+                <div class="flex flex-col gap-space-xs py-space-xs text-on-surface-variant font-body-sm text-body-sm">
+                  <div class="flex justify-between py-1 bg-surface-container-low px-2.5 rounded">
+                    <span class="text-outline">Variedad</span>
+                    <span class="font-semibold text-on-surface">Bourbon &amp; Caturra</span>
+                  </div>
+                  <div class="flex justify-between py-1 px-2.5 rounded">
+                    <span class="text-outline">Proceso</span>
+                    <span class="font-semibold text-on-surface text-right">Natural al sol en camas</span>
+                  </div>
+                  <div class="flex justify-between py-1 bg-surface-container-low px-2.5 rounded">
+                    <span class="text-outline">Puntaje SCA</span>
+                    <span class="font-semibold text-secondary">88.5 Puntos</span>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-1.5 pt-space-xs">
+                  <span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Notas de
+                    Catación</span>
+                  <div class="flex flex-wrap gap-1.5">
+                    <span
+                      class="px-2.5 py-1 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm rounded-full">Chocolate
+                      amargo</span>
+                    <span
+                      class="px-2.5 py-1 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm rounded-full">Naranja
+                      confitada</span>
+                    <span
+                      class="px-2.5 py-1 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm rounded-full">Avellanas</span>
+                  </div>
+                </div>
+              </div>
+              <div class="pt-space-sm flex items-center justify-between bg-surface-container-low p-space-md rounded-xl">
+                <div class="flex flex-col">
+                  <span class="font-label-sm text-label-sm text-outline">Perfil</span>
+                  <span class="font-label-md text-label-md text-primary font-semibold">Chocolatoso &amp; Denso</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <div class="flex flex-col items-center">
+                    <span class="text-[10px] text-outline">Acidez</span>
+                    <div class="w-8 h-1.5 bg-outline-variant rounded-full"></div>
+                  </div>
+                  <div class="flex flex-col items-center">
+                    <span class="text-[10px] text-outline">Cuerpo</span>
+                    <div class="w-8 h-1.5 bg-secondary rounded-full"></div>
+                  </div>
+                  <div class="flex flex-col items-center">
+                    <span class="text-[10px] text-outline">Dulzura</span>
+                    <div class="w-8 h-1.5 bg-secondary rounded-full"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- El Ritual del Tueste -->
+      <section class="w-full bg-primary-container text-surface py-space-xl lg:py-28 relative overflow-hidden">
+        <div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin flex flex-col gap-space-xl relative z-10">
+          <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+            <div class="flex flex-col gap-space-xs max-w-2xl">
+              <span
+                class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-widest font-semibold">Artesanía
+                de Fuego &amp; Tiempo</span>
+              <h2 class="font-headline-xl text-headline-xl text-surface tracking-tight">El Ritual del Tueste</h2>
+              <p class="font-body-md text-body-md text-on-primary-container">
+                No usamos perfiles automatizados por ordenador. Nuestro maestro tostador escucha el primer crack,
+                observa la caramelización y ajusta el flujo de aire segundo a segundo.
+              </p>
+            </div>
+            <div
+              class="inline-flex items-center gap-space-sm bg-surface-container-lowest/10 px-space-md py-space-sm rounded-xl backdrop-blur-sm self-start lg:self-auto">
+              <span class="material-symbols-outlined text-[20px] text-secondary-fixed">mode_fan</span>
+              <span class="font-label-md text-label-md text-surface">Tambor de Hierro Fundido · Tueste Lento</span>
+            </div>
+          </div>
+
+          <!-- Process 4-step Timeline -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter pt-space-md">
+
+            <div
+              class="flex flex-col gap-space-md bg-surface/5 p-space-lg rounded-2xl backdrop-blur-sm hover:bg-surface/10 transition-colors">
+              <div class="flex items-center justify-between">
+                <span class="font-headline-lg text-headline-lg text-secondary-fixed">01</span>
+                <span class="material-symbols-outlined text-secondary-fixed text-[24px]">grain</span>
+              </div>
+              <div class="h-44 w-full rounded-xl overflow-hidden bg-primary">
+                <img class="w-full h-full object-cover" data-alt="Green coffee beans sorting"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWWJ2ttG62jCeS13K0wvczJPTqfZOLHoud3dObvkCHBBsh344VK5kNdHM0jW2mD2B9GCvP3n6wk4wxLyc72D_AyboFTLmHugsd74jU1Vb1wx82yPM6SKjH6apuZwQLtTtyW_QNShCFZj5sqPhzWhdVHWbhI4daPXSrBMqZaLDFvJesGIOJE5XVbGlgcLM3Kc2muvjxGpbrcUSnLPUcNSFrTaMbD2KwtMm1FD23KCEV7PEuxgyWaPEq">
+              </div>
+              <div class="flex flex-col gap-space-xs">
+                <h4 class="font-headline-sm text-headline-sm text-surface">Selección y Cata Verde</h4>
+                <p class="font-body-sm text-body-sm text-on-primary-container leading-relaxed">
+                  Medición estricta de humedad (10-12%), densidad del grano y descarte manual de cualquier defecto antes
+                  de entrar a la tostaduría.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="flex flex-col gap-space-md bg-surface/5 p-space-lg rounded-2xl backdrop-blur-sm hover:bg-surface/10 transition-colors">
+              <div class="flex items-center justify-between">
+                <span class="font-headline-lg text-headline-lg text-secondary-fixed">02</span>
+                <span class="material-symbols-outlined text-secondary-fixed text-[24px]">local_fire_department</span>
+              </div>
+              <div class="h-44 w-full rounded-xl overflow-hidden bg-primary">
+                <img class="w-full h-full object-cover" data-alt="Roaster drum glowing flame"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8mCnYfUrlfhROAMOEAReulwZMOp1c-KXoDoZ7C9xuL42i7SMhFmkkkINKJfSxCGzDk-ldMh0ka1MTkVU4C-04HeCOjBlbF4hHwrPeDGRV3f4IE3A-c89tRrgIfWgdQ2m_DhvIDiOy1TQ_u8mfcw7UzY9I-j17Qq_sRZH-28lY7BaSBsk1rXyFLvOadu_FN-5jf7Qm1GvHuKQ-Sgl06WJPkBq8RIHOJSQBlYkA7yq9Uaaic91FiY0A">
+              </div>
+              <div class="flex flex-col gap-space-xs">
+                <h4 class="font-headline-sm text-headline-sm text-surface">Perfilado Térmico</h4>
+                <p class="font-body-sm text-body-sm text-on-primary-container leading-relaxed">
+                  Curvas térmicas adaptadas a cada densidad celular en tambor de hierro fundido, buscando caramelizar
+                  sin opacar la frescura floral.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="flex flex-col gap-space-md bg-surface/5 p-space-lg rounded-2xl backdrop-blur-sm hover:bg-surface/10 transition-colors">
+              <div class="flex items-center justify-between">
+                <span class="font-headline-lg text-headline-lg text-secondary-fixed">03</span>
+                <span class="material-symbols-outlined text-secondary-fixed text-[24px]">coffee</span>
+              </div>
+              <div class="h-44 w-full rounded-xl overflow-hidden bg-primary">
+                <img class="w-full h-full object-cover" data-alt="Specialty coffee cupping session"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF2SjJQMQ3jHi8QUel5pHCcvLbEs1NOy9M538QXodpVD46NimugCQnm_bPFV-EXpA3lg7xz_sn557wgt641eMYWjkyV_e-W8LUm9iFictC3OkZ5qrKXvXG1F6SkahWLWAIPQfVHvoWxZUx8e-H1JLUxOVj3SNbLP_7iGdbUwJXMGipkXUTkRAHvej-EPx9AcHfikShXTb0cdhD5ScN3m8iMTY2c1SfUGtlK5z7-tZP-WTZgfSVryLD">
+              </div>
+              <div class="flex flex-col gap-space-xs">
+                <h4 class="font-headline-sm text-headline-sm text-surface">Control Calidad SCA</h4>
+                <p class="font-body-sm text-body-sm text-on-primary-container leading-relaxed">
+                  Cada batch se evalúa a las 24 horas en mesa de catación abierta: limpieza de taza, brillo cítrico y
+                  persistencia del retrogusto.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="flex flex-col gap-space-md bg-surface/5 p-space-lg rounded-2xl backdrop-blur-sm hover:bg-surface/10 transition-colors">
+              <div class="flex items-center justify-between">
+                <span class="font-headline-lg text-headline-lg text-secondary-fixed">04</span>
+                <span class="material-symbols-outlined text-secondary-fixed text-[24px]">inventory_2</span>
+              </div>
+              <div class="h-44 w-full rounded-xl overflow-hidden bg-primary">
+                <img class="w-full h-full object-cover" data-alt="Artisanal kraft paper coffee bag"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBa8johPO9RefcyMBYrmqYrOKnm808usFGBgpl56HpfWmtCKmr9rTA7BMoshLg1E23opPhKHWRRneJrxcF_4__6rAYim0MKXv3ijMZf_Aj4SXCL11h2V8uvsnmjOyrL-7Vj5T-Arjl66QBcCtz-CBczjd8SURWMTG97CXWdjg5SGruJWIhBqOHM9teAeK6pZi2KVDc3mbvPN4j7dEJI_xNaYrxxJAuCQFNp27AK_NRKUn87R9bJoDa">
+              </div>
+              <div class="flex flex-col gap-space-xs">
+                <h4 class="font-headline-sm text-headline-sm text-surface">Empaque Hermético</h4>
+                <p class="font-body-sm text-body-sm text-on-primary-container leading-relaxed">
+                  Sellado en bolsas reciclables de barrera total con válvula unidireccional para permitir la liberación
+                  de CO₂ sin ingreso de oxígeno.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Maestros Tostadores & Baristas Section -->
+      <section class="w-full max-w-[1280px] mx-auto px-margin-mobile lg:px-margin py-space-xl lg:py-28">
+        <div
+          class="bg-surface-container-low rounded-3xl p-space-lg lg:p-space-xl grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+          <div class="lg:col-span-5 flex flex-col gap-space-md">
+            <div
+              class="relative w-full aspect-square rounded-2xl overflow-hidden bg-surface-container-high shadow-md card-zoom">
+              <img class="w-full h-full object-cover" data-alt="Portrait of coffee roasters Mateo & Lucía"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4uEAvZKBdKYl4sPUwURiCBruwu7BsxhaUP6UvdZ21wE4Fr368HtRNaPUII-wv20ZzQZZ181X6UWbocEwcUrjS64rOUWF29Ehv_Joe95uMJMHnI4Hvd5rDUY3PZ2PWcEk4cnMtmB35fbUBG1eJdMcJZrWQ8qTMIm-GrPt9JiFFGNab9epMuvfd1S0g6ncffYArYyH_qbfFtvf8fi4uZBOxFoITF_jnRd8xSGzrdPS7evXJUYEyPLVB">
+              <div class="absolute bottom-4 left-4 right-4 bg-surface/90 backdrop-blur-sm p-space-sm rounded-xl">
+                <p class="font-label-md text-label-md text-primary font-semibold">Mateo &amp; Lucía</p>
+                <p class="font-label-sm text-label-sm text-secondary">Fundadores &amp; Maestros Tostadores Q-Graders</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 flex flex-col gap-space-md lg:pl-space-lg">
+            <div
+              class="inline-flex items-center gap-space-xs bg-[#f4ede0] text-[#5c3826] border border-[#5c3826]/20 px-space-md py-1 rounded-full w-fit">
+              <span class="material-symbols-outlined text-[16px]">eco</span>
+              <span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Nuestra Esencia</span>
+            </div>
+            <div class="flex flex-col gap-1">
+              <h2 class="font-headline-xl text-headline-xl text-primary tracking-tight font-recoleta">
+                Nuestra esencia: <span class="font-serif italic font-normal text-secondary">Frescura en cada
+                  momento</span>
+              </h2>
+            </div>
+            <p class="font-body-xl text-body-xl text-on-surface-variant leading-relaxed">
+              “Desde el aroma del café recién preparado hasta el último bocado, cuidamos cada detalle para crear una
+              experiencia que quieras repetir.”
+            </p>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm pt-space-sm">
+              <div
+                class="flex flex-col items-center justify-center p-space-sm rounded-xl bg-surface-container border border-[#d8cbb8]/60 text-center gap-1 hover:shadow-sm transition-shadow">
+                <span class="material-symbols-outlined text-secondary text-[22px]">workspace_premium</span>
+                <span class="font-headline-sm text-[16px] text-primary font-recoleta font-semibold">Calidad</span>
+                <span class="font-label-sm text-[11px] text-on-surface-variant leading-tight">Granos selectos de
+                  especialidad</span>
+              </div>
+              <div
+                class="flex flex-col items-center justify-center p-space-sm rounded-xl bg-surface-container border border-[#d8cbb8]/60 text-center gap-1 hover:shadow-sm transition-shadow">
+                <span class="material-symbols-outlined text-secondary text-[22px]">local_cafe</span>
+                <span class="font-headline-sm text-[16px] text-primary font-recoleta font-semibold">Sabor</span>
+                <span class="font-label-sm text-[11px] text-on-surface-variant leading-tight">Perfiles limpios y
+                  auténticos</span>
+              </div>
+              <div
+                class="flex flex-col items-center justify-center p-space-sm rounded-xl bg-surface-container border border-[#d8cbb8]/60 text-center gap-1 hover:shadow-sm transition-shadow">
+                <span class="material-symbols-outlined text-secondary text-[22px]">favorite</span>
+                <span class="font-headline-sm text-[16px] text-primary font-recoleta font-semibold">Calidez</span>
+                <span class="font-label-sm text-[11px] text-on-surface-variant leading-tight">Un espacio acogedor para
+                  ti</span>
+              </div>
+              <div
+                class="flex flex-col items-center justify-center p-space-sm rounded-xl bg-surface-container border border-[#d8cbb8]/60 text-center gap-1 hover:shadow-sm transition-shadow">
+                <span class="material-symbols-outlined text-secondary text-[22px]">nest_heat_link_gen_3</span>
+                <span class="font-headline-sm text-[16px] text-primary font-recoleta font-semibold">Frescura</span>
+                <span class="font-label-sm text-[11px] text-on-surface-variant leading-tight">Tueste y elaboración al
+                  día</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Talleres de Cata & Brewing Section -->
+      <section class="w-full bg-surface-container-highest/60 py-space-xl lg:py-28">
+        <div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin flex flex-col gap-space-xl">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+            <div class="flex flex-col gap-space-xs max-w-xl">
+              <span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-semibold">Educación
+                &amp; Sensibilidad</span>
+              <h2 class="font-headline-xl text-headline-xl text-primary tracking-tight">Talleres de Cata &amp; Brewing
+              </h2>
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                Aprende a calibrar tu paladar, dominar métodos de extracción manual (V60, Chemex, Aeropress) y
+                comprender los secretos del tostado artesanal.
+              </p>
+            </div>
+            <div class="flex items-center gap-space-xs text-secondary font-label-md text-label-md">
+              <span class="material-symbols-outlined text-[18px]">group</span>
+              <span>Grupos reducidos · Máximo 8 personas por sesión</span>
+            </div>
+          </div>
+
+          <!-- Workshop Schedule Grid -->
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+
+            <!-- Workshop 1 -->
+            <div
+              class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between gap-space-lg hover:shadow-md transition-shadow">
+              <div class="flex flex-col gap-space-sm">
+                <div class="flex items-center justify-between">
+                  <span
+                    class="bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm px-2.5 py-1 rounded-full font-semibold">Próximo
+                    Sábado</span>
+                  <span class="font-label-md text-label-md text-outline">10:00 - 13:00 hs</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-primary">Iniciación a la Cata Sensorial SCA</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Aprende a reconocer acidez, cuerpo, dulzor y defectos. Rueda de sabores interactiva con 5 orígenes en
+                  mesa formal de catación.
+                </p>
+                <div class="flex flex-col gap-space-xs pt-space-xs text-label-sm font-label-sm text-on-surface-variant">
+                  <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+                    <span>Incluye libreta sensorial y kit de granos muestra</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+                    <span>Guiado por Maestro Q-Grader</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between pt-space-sm">
+                <div class="flex flex-col">
+                  <span class="font-label-sm text-label-sm text-outline">Inversión</span>
+                  <span class="font-headline-sm text-headline-sm text-primary">$650 MXN</span>
+                </div>
+                <button
+                  class="open-modal-btn px-space-md py-2 bg-primary-container hover:bg-secondary text-on-secondary rounded-lg font-label-md text-label-md transition-colors flex items-center gap-1.5"
+                  data-workshop="Iniciación a la Cata Sensorial">
+                  <span>Inscribirme</span>
+                  <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Workshop 2 -->
+            <div
+              class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between gap-space-lg hover:shadow-md transition-shadow">
+              <div class="flex flex-col gap-space-sm">
+                <div class="flex items-center justify-between">
+                  <span
+                    class="bg-[#f4ede0] text-[#5c3826] border border-[#5c3826]/20 font-label-sm text-label-sm px-2.5 py-1 rounded-full font-semibold">24
+                    de Noviembre</span>
+                  <span class="font-label-md text-label-md text-outline">16:00 - 19:30 hs</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-primary">Masterclass Filtrados Manuales</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Dominio técnico de V60, Kalita Wave y Aeropress. Ratios, temperaturas, moliendas micrométricas y
+                  vertido con cuello de cisne.
+                </p>
+                <div class="flex flex-col gap-space-xs pt-space-xs text-label-sm font-label-sm text-on-surface-variant">
+                  <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+                    <span>Práctica individual en barra de filtrado</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+                    <span>Bolsa de 250g de café recién tostado</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between pt-space-sm">
+                <div class="flex flex-col">
+                  <span class="font-label-sm text-label-sm text-outline">Inversión</span>
+                  <span class="font-headline-sm text-headline-sm text-primary">$750 MXN</span>
+                </div>
+                <button
+                  class="open-modal-btn px-space-md py-2 bg-primary-container hover:bg-secondary text-on-secondary rounded-lg font-label-md text-label-md transition-colors flex items-center gap-1.5"
+                  data-workshop="Masterclass Filtrados Manuales">
+                  <span>Inscribirme</span>
+                  <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Workshop 3 -->
+            <div
+              class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between gap-space-lg hover:shadow-md transition-shadow">
+              <div class="flex flex-col gap-space-sm">
+                <div class="flex items-center justify-between">
+                  <span
+                    class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-2.5 py-1 rounded-full font-semibold">01
+                    de Diciembre</span>
+                  <span class="font-label-md text-label-md text-outline">09:30 - 13:30 hs</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-primary">Del Grano Verde a la Taza: Tueste en Vivo
+                </h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Acompaña un ciclo completo de tueste en nuestra máquina de hierro. Escucha los cracks, mide densidad y
+                  tuesta tu propio batch.
+                </p>
+                <div class="flex flex-col gap-space-xs pt-space-xs text-label-sm font-label-sm text-on-surface-variant">
+                  <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+                    <span>Te llevas el lote tostado por tus manos</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+                    <span>Desayuno artesanal incluido en salón</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between pt-space-sm">
+                <div class="flex flex-col">
+                  <span class="font-label-sm text-label-sm text-outline">Inversión</span>
+                  <span class="font-headline-sm text-headline-sm text-primary">$950 MXN</span>
+                </div>
+                <button
+                  class="open-modal-btn px-space-md py-2 bg-primary-container hover:bg-secondary text-on-secondary rounded-lg font-label-md text-label-md transition-colors flex items-center gap-1.5"
+                  data-workshop="Tueste en Vivo">
+                  <span>Inscribirse</span>
+                  <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Workshop Registration Callout Banner -->
+          <div
+            class="bg-surface-container-lowest p-space-lg rounded-2xl flex flex-col md:flex-row items-center justify-between gap-space-md shadow-sm">
+            <div class="flex items-center gap-space-md">
+              <div
+                class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+                <span class="material-symbols-outlined text-[24px]">school</span>
+              </div>
+              <div class="flex flex-col">
+                <h4 class="font-headline-sm text-headline-sm text-primary">¿Deseas una experiencia privada o para tu
+                  equipo?</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Organizamos cataciones cerradas y team
+                  buildings corporativos alrededor de la cultura del café.</p>
+              </div>
+            </div>
+            <button
+              class="open-modal-btn whitespace-nowrap px-space-lg py-space-sm bg-primary-container hover:bg-secondary text-on-secondary rounded-lg font-label-lg text-label-lg transition-colors flex items-center gap-space-xs"
+              data-workshop="Sesión Privada para Grupos">
+              <span class="material-symbols-outlined text-[18px]">mail</span>
+              <span>Consultar Sesión Privada</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive Modal for Workshop Registration -->
+      <div
+        class="fixed inset-0 z-50 bg-primary/60 backdrop-blur-sm hidden items-center justify-center p-space-md modal-backdrop"
+        id="registerModal">
+        <div
+          class="bg-surface-container-lowest w-full max-w-lg rounded-2xl p-space-xl shadow-2xl flex flex-col gap-space-md relative">
+          <button class="absolute top-4 right-4 text-outline hover:text-on-surface transition-colors p-1"
+            id="closeModalBtn">
+            <span class="material-symbols-outlined text-[24px]">close</span>
+          </button>
+          <div class="flex flex-col gap-space-xs">
+            <span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-semibold">Inscripción
+              a Taller</span>
+            <h3 class="font-headline-lg text-headline-lg text-primary" id="modalTitle">Iniciación a la Cata Sensorial
+            </h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">Completa tus datos para reservar tu plaza. Te
+              enviaremos la confirmación y guía previa por correo.</p>
+          </div>
+          <form class="flex flex-col gap-space-md pt-space-xs" id="workshopForm">
+            <div class="flex flex-col gap-1">
+              <label class="font-label-sm text-label-sm text-on-surface-variant">Nombre y Apellido</label>
+              <input
+                class="w-full px-space-md py-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:bg-surface-container-lowest focus:outline-none focus:ring-1 focus:ring-secondary transition-all"
+                placeholder="Ej: Clara Benítez" required="" type="text">
+            </div>
+            <div class="flex flex-col gap-1">
+              <label class="font-label-sm text-label-sm text-on-surface-variant">Correo Electrónico</label>
+              <input
+                class="w-full px-space-md py-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:bg-surface-container-lowest focus:outline-none focus:ring-1 focus:ring-secondary transition-all"
+                placeholder="clara@ejemplo.com" required="" type="email">
+            </div>
+            <div class="flex flex-col gap-1">
+              <label class="font-label-sm text-label-sm text-on-surface-variant">Teléfono / WhatsApp</label>
+              <input
+                class="w-full px-space-md py-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:bg-surface-container-lowest focus:outline-none focus:ring-1 focus:ring-secondary transition-all"
+                placeholder="+54 11 1234-5678" required="" type="tel">
+            </div>
+            <div class="flex flex-col gap-1">
+              <label class="font-label-sm text-label-sm text-on-surface-variant">Nivel de experiencia con café</label>
+              <select
+                class="w-full px-space-md py-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:bg-surface-container-lowest focus:outline-none focus:ring-1 focus:ring-secondary transition-all">
+                <option>Entusiasta / Aficionado en casa</option>
+                <option>Principiante curioso</option>
+                <option>Barista profesional o estudiante</option>
+              </select>
+            </div>
+            <button
+              class="w-full py-3 bg-primary-container hover:bg-secondary text-on-secondary rounded-lg font-label-lg text-label-lg transition-colors shadow-md mt-space-sm flex items-center justify-center gap-2"
+              type="submit">
+              <span class="material-symbols-outlined text-[18px]">verified</span>
+              <span>Confirmar Reserva de Plaza</span>
+            </button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Reusable Footer Component -->
+  <div id="site-footer"></div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/origen.js"></script>
+</body>
+
+</html>
