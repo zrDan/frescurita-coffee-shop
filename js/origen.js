@@ -1,6 +1,6 @@
 /**
  * La Frescurita Café & Tostaduría
- * Origin & Roastery Interactions (origen-y-tostaduria.html)
+ * Interacciones de Origen y Tostaduría (origen-y-tostaduria.html)
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -13,7 +13,7 @@ function initOrigenPage() {
 }
 
 /**
- * Filter coffee origins (All, Colombia Huila, Etiopía Yirgacheffe, Guatemala Antigua)
+ * Filtro de orígenes de café (Todos, Colombia Huila, Etiopía Yirgacheffe, Guatemala Antigua)
  */
 function initOriginFilters() {
   const cards = document.querySelectorAll('.coffee-card');
@@ -52,7 +52,7 @@ function initOriginFilters() {
 }
 
 /**
- * Workshop Modal Interactions (Open, Close, Keyboard ESC, Submit)
+ * Interacciones de la ventana modal para talleres (Abrir, Cerrar, Tecla ESC, Enviar formulario)
  */
 function initWorkshopModal() {
   const modal = document.getElementById('registerModal');
@@ -93,7 +93,7 @@ function initWorkshopModal() {
     }
   };
 
-  // Close modal on ESC key
+  // Cerrar modal al presionar la tecla Escape
   window.onkeydown = (e) => {
     if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
       closeModal();
@@ -114,7 +114,7 @@ function initWorkshopModal() {
   }
 }
 
-// Global exports for SPA navigation
+// Exportaciones globales para navegación SPA
 window.initOrigenPage = initOrigenPage;
 window.initOriginFilters = initOriginFilters;
 window.initWorkshopModal = initWorkshopModal;

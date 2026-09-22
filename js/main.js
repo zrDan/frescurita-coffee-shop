@@ -1,6 +1,6 @@
 /**
  * La Frescurita Café & Tostaduría
- * Global Scripts, Dynamic Component Loader, SPA Router & Interactions
+ * Scripts Globales, Cargador Dinámico de Componentes, Enrutador SPA e Interacciones
  */
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 /**
- * Loads header and footer component files dynamically
+ * Carga dinámicamente los archivos de componentes de encabezado y pie de página
  */
 async function loadSiteComponents() {
   const headerContainer = document.getElementById('site-header') || document.querySelector('[data-component="header"]');
@@ -26,13 +26,13 @@ async function loadSiteComponents() {
     promises.push(
       fetch('components/header.html')
         .then(res => {
-          if (!res.ok) throw new Error(`Status ${res.status}`);
+          if (!res.ok) throw new Error(`Estado ${res.status}`);
           return res.text();
         })
         .then(html => {
           headerContainer.innerHTML = html;
         })
-        .catch(err => console.warn('Could not load components/header.html:', err))
+        .catch(err => console.warn('No se pudo cargar components/header.html:', err))
     );
   }
 
@@ -40,13 +40,13 @@ async function loadSiteComponents() {
     promises.push(
       fetch('components/footer.html')
         .then(res => {
-          if (!res.ok) throw new Error(`Status ${res.status}`);
+          if (!res.ok) throw new Error(`Estado ${res.status}`);
           return res.text();
         })
         .then(html => {
           footerContainer.innerHTML = html;
         })
-        .catch(err => console.warn('Could not load components/footer.html:', err))
+        .catch(err => console.warn('No se pudo cargar components/footer.html:', err))
     );
   }
 
@@ -56,12 +56,12 @@ async function loadSiteComponents() {
 }
 
 /**
- * Single Page Application (SPA) Client-Side Router
- * Intercepts internal links and swaps <main> without full-page reloads
+ * Enrutador del lado del cliente para Aplicación de Página Única (SPA)
+ * Intercepta enlaces internos e intercambia la etiqueta <main> sin recargar la página completa
  */
 function initSpaRouter() {
   document.addEventListener('click', async (e) => {
-    // Ignore clicks with modifier keys (Ctrl/Cmd for new tab, Shift, etc.)
+    // Ignorar clics con teclas modificadoras (Ctrl/Cmd para nueva pestaña, Shift, etc.)
     if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.defaultPrevented) {
       return;
     }
@@ -72,7 +72,7 @@ function initSpaRouter() {
     const href = link.getAttribute('href');
     if (!href) return;
 
-    // Ignore anchors, external links, protocols, or javascript pseudo-protocols
+    // Ignorar anclas, enlaces externos, protocolos o pseudoprotocolos de javascript
     if (
       href.startsWith('#') ||
       href.startsWith('http://') ||
@@ -86,14 +86,14 @@ function initSpaRouter() {
       return;
     }
 
-    // Must be an internal HTML page or root
+    // Debe ser una página HTML interna o la raíz
     if (href.endsWith('.html') || href === '/' || href.includes('.html#')) {
       e.preventDefault();
       await navigateTo(href);
     }
   });
 
-  // Handle browser back/forward history navigation
+  // Gestionar navegación por el historial del navegador (Atrás / Adelante)
   window.addEventListener('popstate', () => {
     const currentPath = window.location.pathname.split('/').pop() || 'inicio.html';
     loadPageContent(currentPath, false);
@@ -101,10 +101,10 @@ function initSpaRouter() {
 }
 
 /**
- * Navigate to a specific internal URL without reloading the browser
+ * Navega a una URL interna específica sin recargar el navegador
  */
 async function navigateTo(url) {
-  // Push state to browser history
+  // Guardar el estado en el historial del navegador
   if (window.location.pathname.split('/').pop() !== url) {
     window.history.pushState({}, '', url);
   }
@@ -112,13 +112,13 @@ async function navigateTo(url) {
 }
 
 /**
- * Fetches and replaces only the <main> content
+ * Obtiene y reemplaza únicamente el contenido de la etiqueta <main>
  */
 async function loadPageContent(url, scrollToTop = true) {
   try {
     const fetchUrl = url.split('#')[0] || 'inicio.html';
     const res = await fetch(fetchUrl);
-    if (!res.ok) throw new Error(`HTTP error ${res.status}`);
+    if (!res.ok) throw new Error(`Error HTTP ${res.status}`);
     const htmlText = await res.text();
 
     const parser = new DOMParser();
@@ -128,7 +128,7 @@ async function loadPageContent(url, scrollToTop = true) {
     const currentMain = document.querySelector('main');
 
     if (newMain && currentMain) {
-      // Smooth fade out/in effect
+      // Efecto suave de desvanecimiento (fade out / fade in)
       currentMain.style.opacity = '0';
       currentMain.style.transition = 'opacity 0.15s ease-out';
 
@@ -160,13 +160,13 @@ async function loadPageContent(url, scrollToTop = true) {
       }, 150);
     }
   } catch (err) {
-    console.error('Error in SPA routing, falling back to standard navigation:', err);
+    console.error('Error en el enrutamiento SPA, recurriendo a navegación estándar:', err);
     window.location.href = url;
   }
 }
 
 /**
- * Re-initializes page-specific JavaScript modules after SPA page load
+ * Reinicializa los módulos JavaScript específicos de cada página tras la carga SPA
  */
 async function reinitPageScripts(url) {
   const page = (url || window.location.pathname).split('/').pop().split('?')[0].split('#')[0] || 'inicio.html';
@@ -196,7 +196,7 @@ async function reinitPageScripts(url) {
 }
 
 /**
- * Helper to dynamically load a script file on demand
+ * Función auxiliar para cargar dinámicamente un archivo de script bajo demanda
  */
 function loadScript(src) {
   return new Promise((resolve, reject) => {
@@ -213,7 +213,7 @@ function loadScript(src) {
 }
 
 /**
- * Marks current navigation item as active based on pathname across desktop and mobile nav
+ * Marca el elemento de navegación actual como activo según la ruta en escritorio y móvil
  */
 function initActiveNav() {
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
@@ -245,7 +245,7 @@ function initActiveNav() {
 }
 
 /**
- * Mobile & Tablet Slide-out Drawer Menu Controller
+ * Controlador del menú lateral desplegable (Drawer) para móviles y tabletas
  */
 function initMobileMenu() {
   const toggleBtn = document.getElementById('mobile-menu-toggle');
@@ -296,14 +296,14 @@ function initMobileMenu() {
     closeMenu();
   };
 
-  // Close with ESC key
+  // Cerrar al presionar la tecla Escape
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && !drawer.classList.contains('translate-x-full')) {
       closeMenu();
     }
   });
 
-  // Automatically close drawer when clicking any link inside it
+  // Cerrar automáticamente el menú lateral al hacer clic en cualquiera de sus enlaces
   drawer.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       closeMenu();
@@ -315,7 +315,7 @@ function initMobileMenu() {
 }
 
 /**
- * Adds dynamic shadow & backdrop to sticky header on scroll
+ * Agrega sombra dinámica y fondo difuminado al encabezado fijo al desplazarse
  */
 function initHeaderScroll() {
   const header = document.querySelector('header');
@@ -331,7 +331,7 @@ function initHeaderScroll() {
 }
 
 /**
- * Handles newsletter subscription with user feedback toast
+ * Gestiona la suscripción al boletín con notificación toast informativa
  */
 function initNewsletterForm() {
   const forms = document.querySelectorAll('footer form');
@@ -366,7 +366,7 @@ function handleSubscription(email, form) {
 }
 
 /**
- * Global Toast Notification Utility
+ * Utilidad global para notificaciones Toast
  */
 function showToast(message, type = 'info') {
   let toastContainer = document.getElementById('global-toast-container');
@@ -397,7 +397,7 @@ function showToast(message, type = 'info') {
   }, 4000);
 }
 
-// Global exports
+// Exportaciones globales
 window.navigateTo = navigateTo;
 window.loadPageContent = loadPageContent;
 window.showToast = showToast;

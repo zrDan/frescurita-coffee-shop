@@ -1,7 +1,7 @@
-<!-- Announcement & Header Bar -->
+<!-- Barra de Anuncios y Encabezado Principal -->
 <header
   class="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(44,24,16,0.05)] transition-all">
-  <!-- Top Bar -->
+  <!-- Barra Superior Informativa -->
   <div
     class="bg-[#5c3826] text-[#fff9ee] px-margin-mobile lg:px-margin py-1.5 text-center flex items-center justify-between text-label-sm font-label-sm border-b border-[#784329]/20">
     <div class="hidden md:flex items-center gap-space-xs text-[#f0bba2]">
@@ -16,9 +16,9 @@
     </div>
   </div>
 
-  <!-- Main Navigation Header -->
+  <!-- Encabezado de Navegación Principal -->
   <div class="h-20 max-w-[1280px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-gutter">
-    <!-- Logo -->
+    <!-- Logotipo -->
     <div class="flex items-center gap-space-md">
       <a class="flex items-center gap-space-sm group" data-path="inicio" href="inicio.html">
         <img alt="La Frescurita - Cafetería"
@@ -32,7 +32,7 @@
       </a>
     </div>
 
-    <!-- Desktop Navigation Menu (hidden on mobile/tablet) -->
+    <!-- Menú de Navegación de Escritorio (oculto en móvil/tableta) -->
     <nav class="hidden lg:flex items-center gap-space-xs p-1 bg-surface-container-low/70 rounded-xl"
       data-active-classes="bg-surface-container-high text-on-surface font-semibold rounded-lg shadow-sm">
       <a class="px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all"
@@ -45,7 +45,7 @@
         data-path="visitanos-y-reservas" href="visitanos-y-reservas.html">Visítanos &amp; Reservas</a>
     </nav>
 
-    <!-- Right Action Area & Mobile Hamburger Button -->
+    <!-- Área de Acciones Derecha y Botón de Menú Móvil -->
     <div class="flex items-center gap-space-sm sm:gap-space-md">
       <a class="hidden xl:flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors text-label-md font-label-md"
         href="tel:+541148213902">
@@ -58,7 +58,7 @@
         <span>Reservar Mesa</span>
       </a>
 
-      <!-- Mobile / Tablet Hamburger Toggle Button -->
+      <!-- Botón de Alternancia de Menú Móvil / Tableta -->
       <button id="mobile-menu-toggle"
         class="lg:hidden p-2.5 rounded-xl bg-surface-container text-primary hover:bg-surface-container-high focus:outline-none focus:ring-2 focus:ring-[#5c3826]/30 transition-all flex items-center justify-center cursor-pointer"
         type="button" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mobile-menu-drawer">
@@ -68,17 +68,17 @@
   </div>
 </header>
 
-<!-- Mobile / Tablet Drawer Menu Backdrop -->
+<!-- Fondo Oscuro del Menú Desplegable Móvil / Tableta -->
 <div id="mobile-menu-backdrop"
   class="fixed inset-0 bg-[#090100]/60 backdrop-blur-sm z-[60] opacity-0 pointer-events-none transition-opacity duration-300">
 </div>
 
-<!-- Mobile / Tablet Slide-out Drawer Panel -->
+<!-- Panel Desplegable Lateral para Móvil / Tableta -->
 <aside id="mobile-menu-drawer"
   class="fixed top-0 right-0 h-full w-[310px] max-w-[85vw] bg-surface z-[70] shadow-2xl flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-in-out border-l border-[#5c3826]/15 overflow-y-auto"
   aria-label="Navegación Móvil">
 
-  <!-- Drawer Header -->
+  <!-- Encabezado del Panel Desplegable -->
   <div class="p-space-md border-b border-[#5c3826]/10 flex items-center justify-between bg-surface-container-low">
     <div class="flex items-center gap-space-sm">
       <img alt="La Frescurita" class="h-8 w-8 object-contain rounded-lg"
@@ -96,7 +96,7 @@
     </button>
   </div>
 
-  <!-- Drawer Nav Links -->
+  <!-- Enlaces de Navegación del Panel Desplegable -->
   <div class="flex-1 py-space-md px-space-sm overflow-y-auto">
     <div class="px-space-sm mb-space-xs">
       <span class="font-label-sm text-[11px] uppercase tracking-wider text-outline font-semibold">Navegación</span>
@@ -124,7 +124,7 @@
       </a>
     </nav>
 
-    <!-- Direct Reservations CTA -->
+    <!-- Llamado a la Acción Directo para Reservas -->
     <div class="mt-space-lg px-space-xs">
       <a class="w-full py-3 px-space-md bg-[#5c3826] hover:bg-[#422312] text-[#ffffff] rounded-xl font-label-lg text-label-lg shadow-md transition-all flex items-center justify-center gap-2"
         data-path="visitanos-y-reservas" href="visitanos-y-reservas.html">
@@ -134,7 +134,7 @@
     </div>
   </div>
 
-  <!-- Drawer Footer Details -->
+  <!-- Detalles al Pie del Panel Desplegable -->
   <div
     class="p-space-md border-t border-[#5c3826]/10 bg-surface-container-low space-y-space-xs text-xs text-on-surface-variant">
     <div class="flex items-center gap-2">

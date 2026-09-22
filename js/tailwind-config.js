@@ -1,13 +1,13 @@
 /**
- * Tailwind CSS Configuration for La Frescurita Café & Tostaduría
- * Theme: Artisanal Warmth
+ * Configuración de Tailwind CSS para La Frescurita Café & Tostaduría
+ * Tema: Calidez Artesanal
  */
 tailwind.config = {
   darkMode: "class",
   theme: {
     extend: {
       colors: {
-        // Primary (Roasted Espresso & Dark Roast Ink)
+        // Primario (Espresso Tostado & Tinta Tueste Oscuro)
         "primary": "#090100",
         "on-primary": "#ffffff",
         "primary-container": "#2c1810",
@@ -18,7 +18,7 @@ tailwind.config = {
         "on-primary-fixed-variant": "#5a4137",
         "inverse-primary": "#e3bfb2",
 
-        // Secondary (Artisanal Terracotta & Caramel Spices)
+        // Secundario (Terracota Artesanal & Especias de Caramelo)
         "secondary": "#8d4e2a",
         "on-secondary": "#ffffff",
         "secondary-container": "#feab80",
@@ -28,7 +28,7 @@ tailwind.config = {
         "on-secondary-fixed": "#341100",
         "on-secondary-fixed-variant": "#703715",
 
-        // Tertiary (Botanical Sage & Forest Roast)
+        // Terciario (Salvia Botánica & Tueste Bosque)
         "tertiary": "#010300",
         "on-tertiary": "#ffffff",
         "tertiary-container": "#13200b",
@@ -38,7 +38,7 @@ tailwind.config = {
         "on-tertiary-fixed": "#121f0a",
         "on-tertiary-fixed-variant": "#3d4b32",
 
-        // Surface & Backgrounds (Parchment & Warm Neutrals)
+        // Superficies y Fondos (Pergamino & Neutros Cálidos)
         "background": "#fcf9f3",
         "on-background": "#1c1c18",
 
@@ -57,17 +57,17 @@ tailwind.config = {
         "inverse-surface": "#31312d",
         "inverse-on-surface": "#f3f0ea",
 
-        // Outlines & Borders
+        // Contornos y Bordes
         "outline": "#827470",
         "outline-variant": "#d3c3be",
 
-        // Status & Alerts
+        // Estados y Alertas
         "error": "#ba1a1a",
         "on-error": "#ffffff",
         "error-container": "#ffdad6",
         "on-error-container": "#93000a",
 
-        // Stitch Artisanal Specialty Brand Aliases
+        // Alias de Marca Artesanal Especializada
         "roast-espresso": "#2c1810",
         "roast-chestnut": "#5c3826",
         "roast-warm": "#885035",

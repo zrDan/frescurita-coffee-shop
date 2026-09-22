@@ -1,8 +1,8 @@
-/* --- External Fonts & Icons (Must be at the very top of stylesheet) --- */
+/* --- Fuentes e Íconos Externos (Debe estar en la parte superior de la hoja de estilos) --- */
 @import url('https://use.typekit.net/ojm0owy.css');
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap');
 
-/* --- Local Custom Fonts (fonts/) --- */
+/* --- Fuentes Personalizadas Locales (fonts/) --- */
 @font-face {
   font-family: 'Recoleta';
   src: url('../fonts/recoleta/Recoleta-Regular.otf') format('opentype');
@@ -11,7 +11,7 @@
   font-display: swap;
 }
 
-/* --- Design System Color Tokens (Stitch: Artisanal Warmth) --- */
+/* --- Tokens de Color del Sistema de Diseño (Stitch: Artisanal Warmth) --- */
 :root {
   --color-primary: #090100;
   --color-primary-container: #2c1810;
@@ -65,7 +65,7 @@
   --color-error-container: #ffdad6;
 }
 
-/* --- Base & Reset Rules --- */
+/* --- Reglas Base y de Reinicio --- */
 @layer base {
 
   html,
@@ -96,7 +96,7 @@
   }
 }
 
-/* --- Scrollbar Customization --- */
+/* --- Personalización de la Barra de Desplazamiento --- */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -115,7 +115,7 @@
   background: #827470;
 }
 
-/* --- Typography & Branding Fonts (Adobe Typekit + Recoleta) --- */
+/* --- Tipografía y Fuentes de Marca (Adobe Typekit + Recoleta) --- */
 .font-recoleta,
 .font-serif {
   font-family: 'Recoleta', 'cooper-black-std', 'Cooper Black', 'Fraunces', serif;
@@ -157,12 +157,12 @@ h6 {
   font-family: 'Recoleta', 'cooper-black-std', 'Cooper Black', serif;
 }
 
-/* --- Interactive Elements & Transitions --- */
+/* --- Elementos Interactivos y Transiciones --- */
 .transition-smooth {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Image zoom effect on card hovers */
+/* Efecto de zoom en imágenes al pasar el cursor por las tarjetas */
 .card-zoom img {
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -171,14 +171,14 @@ h6 {
   transform: scale(1.05);
 }
 
-/* --- Modal Transitions --- */
+/* --- Transiciones de Modales --- */
 .modal-backdrop {
   background-color: rgba(9, 1, 0, 0.6);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 }
 
-/* --- Toast Notifications --- */
+/* --- Notificaciones Toast --- */
 .toast-slide-in {
   animation: toastIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
@@ -195,13 +195,13 @@ h6 {
   }
 }
 
-/* --- FAQ Accordion Animations --- */
+/* --- Animaciones de Acordeón de Preguntas Frecuentes --- */
 .faq-toggle svg,
 .faq-toggle span.material-symbols-outlined {
   transition: transform 0.3s ease;
 }
 
-/* --- Material Symbols Outlined Configuration --- */
+/* --- Configuración de Material Symbols Outlined --- */
 .material-symbols-outlined {
   font-family: 'Material Symbols Outlined' !important;
   font-weight: normal;

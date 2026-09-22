@@ -1,6 +1,6 @@
 /**
  * La Frescurita Café & Tostaduría
- * Menu & Specialties Interactions (menu-y-especialidades.html)
+ * Interacciones del Menú y Especialidades (menu-y-especialidades.html)
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,7 +16,7 @@ function initMenuPage() {
 }
 
 /**
- * Smoothly scrolls to an element with dynamic header offset and gentle easing animation
+ * Desplaza suavemente hacia un elemento compensando la altura del encabezado con animación gradual
  */
 function smoothScrollToElement(targetElement, duration = 800) {
   if (!targetElement) return;
@@ -25,7 +25,7 @@ function smoothScrollToElement(targetElement, duration = 800) {
 
   const header = document.querySelector('header');
   const headerHeight = header ? header.getBoundingClientRect().height : 105;
-  // Offset of header height + 24px of clear breathing space so titles are never covered
+  // Compensación de la altura del encabezado + margen de holgura para no tapar los títulos
   const offset = headerHeight - 7;
 
   const startPosition = window.pageYOffset || document.documentElement.scrollTop;
@@ -35,7 +35,7 @@ function smoothScrollToElement(targetElement, duration = 800) {
 
   let startTime = null;
 
-  // Gentle easeInOutCubic for a smooth, progressive glide
+  // Curva de aceleración/desaceleración suave (easeInOutCubic) para un deslizamiento fluido
   function easeInOutCubic(t) {
     return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
   }
@@ -61,7 +61,7 @@ function smoothScrollToElement(targetElement, duration = 800) {
 }
 
 /**
- * Filter and jump to menu sections smoothly (Todos, Café, Panadería, Bebidas frescas, Algo dulce)
+ * Filtra y se desplaza suavemente a las secciones del menú (Todos, Café, Panadería, Bebidas frescas, Algo dulce)
  */
 function initMenuCategoryFilter() {
   const categoryButtons = document.querySelectorAll('.cat-pill');
@@ -71,7 +71,7 @@ function initMenuCategoryFilter() {
     btn.onclick = (e) => {
       e.preventDefault();
 
-      // Update button active states
+      // Actualizar estado activo de los botones
       categoryButtons.forEach(b => {
         b.classList.remove('bg-primary-container', 'bg-primary', 'text-on-primary');
         b.classList.add('text-on-surface-variant');
@@ -79,7 +79,7 @@ function initMenuCategoryFilter() {
       btn.classList.add('bg-primary-container', 'text-on-primary');
       btn.classList.remove('text-on-surface-variant');
 
-      // Ensure all sections are visible for smooth scrolling
+      // Asegurar que todas las secciones estén visibles para el desplazamiento suave
       allSections.forEach(sec => sec.classList.remove('hidden'));
 
       const cat = btn.getAttribute('data-category');
@@ -98,7 +98,7 @@ function initMenuCategoryFilter() {
 }
 
 /**
- * Synchronizes category pill highlighting as user scrolls through the menu
+ * Sincroniza el botón de categoría activo mientras el usuario se desplaza por el menú
  */
 function initMenuScrollSpy() {
   const allSections = document.querySelectorAll('.menu-section');
@@ -138,7 +138,7 @@ function initMenuScrollSpy() {
 }
 
 /**
- * Grind toggle buttons in the coffee bag customizer
+ * Botones de selección de molienda en el personalizador de café en bolsa
  */
 function initGrindSelector() {
   const grindBtns = document.querySelectorAll('.grind-btn');
@@ -155,7 +155,7 @@ function initGrindSelector() {
 }
 
 /**
- * Coffee bag weight to price calculation
+ * Cálculo del precio según el peso seleccionado para café en bolsa
  */
 function initWeightPriceCalculator() {
   const weightInputs = document.querySelectorAll('input[name="weight"]');
@@ -176,7 +176,7 @@ function initWeightPriceCalculator() {
 }
 
 /**
- * Cart Toast Notification when adding packaged coffee
+ * Notificación toast al agregar café en bolsa para retiro en barra
  */
 function initAddToCartToast() {
   const addBagBtn = document.getElementById('add-bag-btn');
@@ -196,7 +196,7 @@ function initAddToCartToast() {
   }
 }
 
-// Global exports for SPA navigation
+// Exportaciones globales para navegación SPA
 window.initMenuPage = initMenuPage;
 window.initMenuCategoryFilter = initMenuCategoryFilter;
 window.initMenuScrollSpy = initMenuScrollSpy;

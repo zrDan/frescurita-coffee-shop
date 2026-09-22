@@ -1,6 +1,6 @@
 /**
  * La Frescurita Café & Tostaduría
- * Visits & Table Booking Interactions (visitanos-y-reservas.html)
+ * Interacciones de Visitas y Reservas de Mesas (visitanos-y-reservas.html)
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,8 +16,8 @@ function initReservasPage() {
 }
 
 /**
- * Interactive Booking Calendar
- * Range: Today -> December 31 of current year
+ * Calendario interactivo de reservas
+ * Rango disponible: Hoy -> 31 de Diciembre del año en curso
  */
 function initInteractiveCalendar() {
   const monthYearLabel = document.getElementById('calendar-month-year');
@@ -33,14 +33,14 @@ function initInteractiveCalendar() {
   today.setHours(0, 0, 0, 0);
 
   const currentYear = today.getFullYear();
-  const currentMonth = today.getMonth(); // 0-indexed (0 = Jan, 11 = Dec)
+  const currentMonth = today.getMonth(); // Índice base 0 (0 = Ene, 11 = Dic)
   const endOfYear = new Date(currentYear, 11, 31, 23, 59, 59);
 
-  // State: currently displayed month/year
+  // Estado: mes y año visualizados actualmente
   let viewYear = currentYear;
   let viewMonth = currentMonth;
 
-  // Selected date defaults to today
+  // La fecha seleccionada por defecto es hoy
   let selectedDate = new Date(today);
 
   const monthNames = [
@@ -74,9 +74,9 @@ function initInteractiveCalendar() {
   function renderCalendar() {
     monthYearLabel.textContent = `${monthNames[viewMonth]} ${viewYear}`;
 
-    // Prev button is disabled if viewMonth is current month of current year
+    // El botón anterior se deshabilita si viewMonth es el mes actual del año en curso
     const isAtStart = viewYear === currentYear && viewMonth <= currentMonth;
-    // Next button is disabled if viewMonth is December (11)
+    // El botón siguiente se deshabilita si viewMonth es Diciembre (11)
     const isAtEnd = viewYear === currentYear && viewMonth >= 11;
 
     if (prevBtn) {
@@ -90,10 +90,10 @@ function initInteractiveCalendar() {
       nextBtn.classList.toggle('cursor-not-allowed', isAtEnd);
     }
 
-    // Clear grid
+    // Limpiar cuadrícula
     grid.innerHTML = '';
 
-    // Day headers: L, M, M, J, V, S, D (Monday first)
+    // Encabezados de días: L, M, M, J, V, S, D (Lunes primero)
     const weekHeaders = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
     weekHeaders.forEach(h => {
       const headerSpan = document.createElement('span');
@@ -102,12 +102,12 @@ function initInteractiveCalendar() {
       grid.appendChild(headerSpan);
     });
 
-    // First day of current viewMonth
+    // Primer día del mes visualizado
     const firstDay = new Date(viewYear, viewMonth, 1);
-    // getDay() returns 0 for Sunday, 1 for Monday... We want Monday = 0, Sunday = 6
+    // getDay() devuelve 0 para domingo, 1 para lunes... Ajustamos a Lunes = 0, Domingo = 6
     const startDayOfWeek = (firstDay.getDay() + 6) % 7;
 
-    // Previous month filler days
+    // Días de relleno del mes anterior
     const prevMonthLastDate = new Date(viewYear, viewMonth, 0).getDate();
     for (let i = startDayOfWeek - 1; i >= 0; i--) {
       const prevDaySpan = document.createElement('span');
@@ -116,7 +116,7 @@ function initInteractiveCalendar() {
       grid.appendChild(prevDaySpan);
     }
 
-    // Days in current month
+    // Días del mes actual
     const daysInMonth = new Date(viewYear, viewMonth + 1, 0).getDate();
 
     for (let day = 1; day <= daysInMonth; day++) {
@@ -157,7 +157,7 @@ function initInteractiveCalendar() {
       grid.appendChild(btn);
     }
 
-    // Trailing month filler days to complete grid
+    // Días de relleno del siguiente mes para completar la cuadrícula
     const totalSlots = startDayOfWeek + daysInMonth;
     const remainingSlots = (7 - (totalSlots % 7)) % 7;
     for (let j = 1; j <= remainingSlots; j++) {
@@ -193,7 +193,7 @@ function initInteractiveCalendar() {
 }
 
 /**
- * Time Slot Selector
+ * Selector de franjas horarias y turnos
  */
 function initTimeSlotChooser() {
   const timeSlots = document.querySelectorAll('.time-slot');
@@ -212,7 +212,7 @@ function initTimeSlotChooser() {
 }
 
 /**
- * Party Size / Pax Selector
+ * Selector de cantidad de comensales (Pax)
  */
 function initPaxSelector() {
   const paxBtns = document.querySelectorAll('.pax-btn');
@@ -231,7 +231,7 @@ function initPaxSelector() {
 }
 
 /**
- * FAQ Accordions
+ * Acordeón interactivo de Preguntas Frecuentes (FAQ)
  */
 function initFaqAccordion() {
   const toggles = document.querySelectorAll('.faq-toggle');
@@ -242,7 +242,7 @@ function initFaqAccordion() {
       const icon = btn.querySelector('.material-symbols-outlined') || btn.querySelector('svg');
       const isCurrentlyHidden = content.classList.contains('hidden');
 
-      // Close all other tabs
+      // Cerrar las demás pestañas abiertas
       document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
       document.querySelectorAll('.faq-toggle .material-symbols-outlined').forEach(i => i.classList.remove('rotate-180'));
 
@@ -254,7 +254,7 @@ function initFaqAccordion() {
   });
 }
 
-// Global toggle for backward compatibility
+// Conmutador global para compatibilidad hacia atrás
 window.toggleFaq = function(btn) {
   const content = btn.nextElementSibling;
   const icon = btn.querySelector('.material-symbols-outlined');
@@ -270,7 +270,7 @@ window.toggleFaq = function(btn) {
 };
 
 /**
- * Booking Form Handler & Confirmation Box
+ * Gestor del formulario de reserva y cuadro de confirmación
  */
 function initBookingForm() {
   const form = document.getElementById('reservation-form');
@@ -318,7 +318,7 @@ window.showConfirmation = function() {
   }
 };
 
-// Global exports for SPA navigation
+// Exportaciones globales para navegación SPA
 window.initReservasPage = initReservasPage;
 window.initInteractiveCalendar = initInteractiveCalendar;
 window.initTimeSlotChooser = initTimeSlotChooser;
