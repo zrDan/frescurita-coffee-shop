@@ -6,6 +6,7 @@
 document.addEventListener('DOMContentLoaded', async () => {
   await loadSiteComponents();
   initActiveNav();
+  initMobileMenu();
   initHeaderScroll();
   initNewsletterForm();
   initSpaRouter();
@@ -212,30 +213,105 @@ function loadScript(src) {
 }
 
 /**
- * Marks current navigation item as active based on pathname
+ * Marks current navigation item as active based on pathname across desktop and mobile nav
  */
 function initActiveNav() {
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-  const navLinks = document.querySelectorAll('header nav a');
+  const desktopNavLinks = document.querySelectorAll('header nav a');
+  const mobileNavLinks = document.querySelectorAll('#mobile-menu-drawer .mobile-nav-link');
 
-  navLinks.forEach(link => {
-    const href = link.getAttribute('href');
+  const updateLinkClass = (links, activeBg, activeText) => {
+    links.forEach(link => {
+      const href = link.getAttribute('href');
+      const isMatch = href === currentPath || 
+        (currentPath === '' && (href === 'index.html' || href === 'inicio.html')) ||
+        (currentPath === 'index.html' && (href === 'index.html' || href === 'inicio.html')) ||
+        (currentPath === 'inicio.html' && (href === 'inicio.html' || href === 'index.html'));
 
-    const isMatch = href === currentPath || 
-      (currentPath === '' && (href === 'index.html' || href === 'inicio.html')) ||
-      (currentPath === 'index.html' && (href === 'index.html' || href === 'inicio.html')) ||
-      (currentPath === 'inicio.html' && (href === 'inicio.html' || href === 'index.html'));
+      if (isMatch) {
+        link.classList.add(activeBg, activeText, 'font-semibold', 'shadow-sm');
+        link.classList.remove('text-on-surface-variant');
+        link.setAttribute('aria-current', 'page');
+      } else {
+        link.classList.remove(activeBg, activeText, 'font-semibold', 'shadow-sm');
+        link.classList.add('text-on-surface-variant');
+        link.removeAttribute('aria-current');
+      }
+    });
+  };
 
-    if (isMatch) {
-      link.classList.add('bg-surface-container-high', 'text-on-surface', 'font-semibold', 'shadow-sm');
-      link.classList.remove('text-on-surface-variant');
-      link.setAttribute('aria-current', 'page');
-    } else {
-      link.classList.remove('bg-surface-container-high', 'text-on-surface', 'font-semibold', 'shadow-sm');
-      link.classList.add('text-on-surface-variant');
-      link.removeAttribute('aria-current');
+  updateLinkClass(desktopNavLinks, 'bg-surface-container-high', 'text-on-surface');
+  updateLinkClass(mobileNavLinks, 'bg-surface-container-high', 'text-primary');
+}
+
+/**
+ * Mobile & Tablet Slide-out Drawer Menu Controller
+ */
+function initMobileMenu() {
+  const toggleBtn = document.getElementById('mobile-menu-toggle');
+  const closeBtn = document.getElementById('mobile-menu-close');
+  const drawer = document.getElementById('mobile-menu-drawer');
+  const backdrop = document.getElementById('mobile-menu-backdrop');
+
+  if (!drawer || !backdrop) return;
+
+  function openMenu() {
+    drawer.classList.remove('translate-x-full');
+    drawer.classList.add('translate-x-0');
+    backdrop.classList.remove('opacity-0', 'pointer-events-none');
+    backdrop.classList.add('opacity-100', 'pointer-events-auto');
+    if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    drawer.classList.remove('translate-x-0');
+    drawer.classList.add('translate-x-full');
+    backdrop.classList.remove('opacity-100', 'pointer-events-auto');
+    backdrop.classList.add('opacity-0', 'pointer-events-none');
+    if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  if (toggleBtn) {
+    toggleBtn.onclick = (e) => {
+      e.stopPropagation();
+      const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+      if (isExpanded) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    };
+  }
+
+  if (closeBtn) {
+    closeBtn.onclick = (e) => {
+      e.stopPropagation();
+      closeMenu();
+    };
+  }
+
+  backdrop.onclick = () => {
+    closeMenu();
+  };
+
+  // Close with ESC key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !drawer.classList.contains('translate-x-full')) {
+      closeMenu();
     }
   });
+
+  // Automatically close drawer when clicking any link inside it
+  drawer.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      closeMenu();
+    });
+  });
+
+  window.closeMobileMenu = closeMenu;
+  window.openMobileMenu = openMenu;
 }
 
 /**
@@ -325,3 +401,5 @@ function showToast(message, type = 'info') {
 window.navigateTo = navigateTo;
 window.loadPageContent = loadPageContent;
 window.showToast = showToast;
+window.initMobileMenu = initMobileMenu;
+window.initActiveNav = initActiveNav;

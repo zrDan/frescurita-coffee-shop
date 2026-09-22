@@ -9,20 +9,68 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function initMenuPage() {
   initMenuCategoryFilter();
+  initMenuScrollSpy();
   initGrindSelector();
   initWeightPriceCalculator();
   initAddToCartToast();
 }
 
 /**
- * Filter sections by category (Café, Panadería, Bebidas frescas, Algo dulce, etc.)
+ * Smoothly scrolls to an element with dynamic header offset and gentle easing animation
+ */
+function smoothScrollToElement(targetElement, duration = 800) {
+  if (!targetElement) return;
+
+  window._menuIsClickScrolling = true;
+
+  const header = document.querySelector('header');
+  const headerHeight = header ? header.getBoundingClientRect().height : 105;
+  // Offset of header height + 24px of clear breathing space so titles are never covered
+  const offset = headerHeight - 7;
+
+  const startPosition = window.pageYOffset || document.documentElement.scrollTop;
+  const elementPosition = targetElement.getBoundingClientRect().top;
+  const targetPosition = Math.max(0, elementPosition + startPosition - offset);
+  const distance = targetPosition - startPosition;
+
+  let startTime = null;
+
+  // Gentle easeInOutCubic for a smooth, progressive glide
+  function easeInOutCubic(t) {
+    return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  }
+
+  function animationStep(currentTime) {
+    if (startTime === null) startTime = currentTime;
+    const timeElapsed = currentTime - startTime;
+    const progress = Math.min(timeElapsed / duration, 1);
+    const ease = easeInOutCubic(progress);
+
+    window.scrollTo(0, startPosition + distance * ease);
+
+    if (timeElapsed < duration) {
+      requestAnimationFrame(animationStep);
+    } else {
+      setTimeout(() => {
+        window._menuIsClickScrolling = false;
+      }, 150);
+    }
+  }
+
+  requestAnimationFrame(animationStep);
+}
+
+/**
+ * Filter and jump to menu sections smoothly (Todos, Café, Panadería, Bebidas frescas, Algo dulce)
  */
 function initMenuCategoryFilter() {
   const categoryButtons = document.querySelectorAll('.cat-pill');
   const allSections = document.querySelectorAll('.menu-section');
 
   categoryButtons.forEach(btn => {
-    btn.onclick = () => {
+    btn.onclick = (e) => {
+      e.preventDefault();
+
       // Update button active states
       categoryButtons.forEach(b => {
         b.classList.remove('bg-primary-container', 'bg-primary', 'text-on-primary');
@@ -31,23 +79,62 @@ function initMenuCategoryFilter() {
       btn.classList.add('bg-primary-container', 'text-on-primary');
       btn.classList.remove('text-on-surface-variant');
 
+      // Ensure all sections are visible for smooth scrolling
+      allSections.forEach(sec => sec.classList.remove('hidden'));
+
       const cat = btn.getAttribute('data-category');
 
       if (!cat || cat === 'all') {
-        allSections.forEach(sec => sec.classList.remove('hidden'));
+        const firstSection = document.getElementById('section-cafe') || allSections[0];
+        smoothScrollToElement(firstSection, 750);
       } else {
-        allSections.forEach(sec => {
-          const targetId = `section-${cat}`;
-          if (sec.id === targetId || sec.getAttribute('data-category') === cat) {
-            sec.classList.remove('hidden');
-            sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          } else {
-            sec.classList.add('hidden');
-          }
-        });
+        const targetSection = document.getElementById(`section-${cat}`);
+        if (targetSection) {
+          smoothScrollToElement(targetSection, 800);
+        }
       }
     };
   });
+}
+
+/**
+ * Synchronizes category pill highlighting as user scrolls through the menu
+ */
+function initMenuScrollSpy() {
+  const allSections = document.querySelectorAll('.menu-section');
+  const categoryButtons = document.querySelectorAll('.cat-pill');
+  if (!allSections.length || !categoryButtons.length) return;
+
+  const header = document.querySelector('header');
+  const headerHeight = header ? header.getBoundingClientRect().height : 105;
+
+  window.addEventListener('scroll', () => {
+    if (window._menuIsClickScrolling) return;
+
+    const scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+    const triggerOffset = headerHeight + 140;
+
+    let currentCat = 'all';
+
+    allSections.forEach(sec => {
+      const top = sec.offsetTop - triggerOffset;
+      const height = sec.offsetHeight;
+      if (scrollPos >= top && scrollPos < top + height) {
+        currentCat = sec.id.replace('section-', '');
+      }
+    });
+
+    categoryButtons.forEach(btn => {
+      const btnCat = btn.getAttribute('data-category');
+      if (btnCat === currentCat || (currentCat === 'all' && btnCat === 'all')) {
+        btn.classList.add('bg-primary-container', 'text-on-primary');
+        btn.classList.remove('text-on-surface-variant');
+      } else {
+        btn.classList.remove('bg-primary-container', 'bg-primary', 'text-on-primary');
+        btn.classList.add('text-on-surface-variant');
+      }
+    });
+  }, { passive: true });
 }
 
 /**
@@ -112,6 +199,8 @@ function initAddToCartToast() {
 // Global exports for SPA navigation
 window.initMenuPage = initMenuPage;
 window.initMenuCategoryFilter = initMenuCategoryFilter;
+window.initMenuScrollSpy = initMenuScrollSpy;
+window.smoothScrollToElement = smoothScrollToElement;
 window.initGrindSelector = initGrindSelector;
 window.initWeightPriceCalculator = initWeightPriceCalculator;
 window.initAddToCartToast = initAddToCartToast;

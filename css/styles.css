@@ -67,7 +67,9 @@
 
 /* --- Base & Reset Rules --- */
 @layer base {
-  html, body {
+
+  html,
+  body {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
@@ -80,12 +82,17 @@
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   }
 
-  main > :first-child {
+  main> :first-child {
     margin-top: 0 !important;
   }
 
-  main > :last-child {
+  main> :last-child {
     margin-bottom: 0 !important;
+  }
+
+  section[id],
+  .menu-section {
+    scroll-margin-top: 50px;
   }
 }
 
@@ -142,7 +149,11 @@ h1 {
   font-family: 'cooper-black-std', 'Cooper Black', 'Recoleta', serif;
 }
 
-h2, h3, h4, h5, h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Recoleta', 'cooper-black-std', 'Cooper Black', serif;
 }
 
@@ -177,6 +188,7 @@ h2, h3, h4, h5, h6 {
     opacity: 0;
     transform: translateY(16px) scale(0.96);
   }
+
   to {
     opacity: 1;
     transform: translateY(0) scale(1);

@@ -20,15 +20,19 @@
   <div class="h-20 max-w-[1280px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-gutter">
     <!-- Logo -->
     <div class="flex items-center gap-space-md">
-      <img alt="La Frescurita - Cafetería" class="h-9 w-9 object-contain rounded-lg"
-        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ4NMrSpbx765nSNYrD8DHeMnB5inEoe9q_ZBWTvlTb65ETriD45fx3dOVI5JgqMci8b3X8qTj29IrjXMv-qb-cwOotaXMogZqLBShM2mOIIPnevdH9isy3fTqBkn2VRm1UPldfqrodhdTpJ78cuRGvSIjF1ECC4lrC8FaI6r1mZg_7jTKcs7IAtM7LG2ox6D6NGYaeSevHYgC9X6MTwDrxrOnhzU3dCXiKnFGstQS_Cc63LbN0-kp24Nw9m_ddnBWDw">
-      <a class="flex flex-col text-left" data-path="inicio" href="inicio.html">
-        <span class="font-headline-sm text-headline-sm text-primary tracking-tight">La Frescurita</span>
-        <span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.16em] -mt-1">Cafetería</span>
+      <a class="flex items-center gap-space-sm group" data-path="inicio" href="inicio.html">
+        <img alt="La Frescurita - Cafetería"
+          class="h-9 w-9 object-contain rounded-lg group-hover:scale-105 transition-transform"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ4NMrSpbx765nSNYrD8DHeMnB5inEoe9q_ZBWTvlTb65ETriD45fx3dOVI5JgqMci8b3X8qTj29IrjXMv-qb-cwOotaXMogZqLBShM2mOIIPnevdH9isy3fTqBkn2VRm1UPldfqrodhdTpJ78cuRGvSIjF1ECC4lrC8FaI6r1mZg_7jTKcs7IAtM7LG2ox6D6NGYaeSevHYgC9X6MTwDrxrOnhzU3dCXiKnFGstQS_Cc63LbN0-kp24Nw9m_ddnBWDw">
+        <div class="flex flex-col text-left">
+          <span class="font-headline-sm text-headline-sm text-primary tracking-tight font-cooper">La Frescurita</span>
+          <span
+            class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.16em] -mt-1 font-semibold">Cafetería</span>
+        </div>
       </a>
     </div>
 
-    <!-- Desktop Navigation Menu -->
+    <!-- Desktop Navigation Menu (hidden on mobile/tablet) -->
     <nav class="hidden lg:flex items-center gap-space-xs p-1 bg-surface-container-low/70 rounded-xl"
       data-active-classes="bg-surface-container-high text-on-surface font-semibold rounded-lg shadow-sm">
       <a class="px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all"
@@ -41,21 +45,109 @@
         data-path="visitanos-y-reservas" href="visitanos-y-reservas.html">Visítanos &amp; Reservas</a>
     </nav>
 
-    <!-- Action Buttons -->
-    <div class="flex items-center gap-space-md">
+    <!-- Right Action Area & Mobile Hamburger Button -->
+    <div class="flex items-center gap-space-sm sm:gap-space-md">
       <a class="hidden xl:flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors text-label-md font-label-md"
         href="tel:+541148213902">
         <span class="material-symbols-outlined text-[16px]">phone_in_talk</span>
         <span>Mesa Directa</span>
       </a>
-      <a class="px-space-lg py-space-sm bg-[#5c3826] hover:bg-[#422312] text-[#ffffff] rounded-lg font-label-lg text-label-lg shadow-[0_4px_12px_rgba(92,56,38,0.22)] transition-all flex items-center gap-space-xs"
+      <a class="hidden sm:inline-flex px-space-md lg:px-space-lg py-space-sm bg-[#5c3826] hover:bg-[#422312] text-[#ffffff] rounded-lg font-label-md lg:font-label-lg text-label-md lg:text-label-lg shadow-[0_4px_12px_rgba(92,56,38,0.22)] transition-all items-center gap-space-xs"
         data-path="visitanos-y-reservas" href="visitanos-y-reservas.html">
         <span class="material-symbols-outlined text-[18px]">table_restaurant</span>
         <span>Reservar Mesa</span>
       </a>
-      <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
-        <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
-      </div>
+
+      <!-- Mobile / Tablet Hamburger Toggle Button -->
+      <button id="mobile-menu-toggle"
+        class="lg:hidden p-2.5 rounded-xl bg-surface-container text-primary hover:bg-surface-container-high focus:outline-none focus:ring-2 focus:ring-[#5c3826]/30 transition-all flex items-center justify-center cursor-pointer"
+        type="button" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mobile-menu-drawer">
+        <span class="material-symbols-outlined text-[24px]">menu</span>
+      </button>
     </div>
   </div>
 </header>
+
+<!-- Mobile / Tablet Drawer Menu Backdrop -->
+<div id="mobile-menu-backdrop"
+  class="fixed inset-0 bg-[#090100]/60 backdrop-blur-sm z-[60] opacity-0 pointer-events-none transition-opacity duration-300">
+</div>
+
+<!-- Mobile / Tablet Slide-out Drawer Panel -->
+<aside id="mobile-menu-drawer"
+  class="fixed top-0 right-0 h-full w-[310px] max-w-[85vw] bg-surface z-[70] shadow-2xl flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-in-out border-l border-[#5c3826]/15 overflow-y-auto"
+  aria-label="Navegación Móvil">
+
+  <!-- Drawer Header -->
+  <div class="p-space-md border-b border-[#5c3826]/10 flex items-center justify-between bg-surface-container-low">
+    <div class="flex items-center gap-space-sm">
+      <img alt="La Frescurita" class="h-8 w-8 object-contain rounded-lg"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ4NMrSpbx765nSNYrD8DHeMnB5inEoe9q_ZBWTvlTb65ETriD45fx3dOVI5JgqMci8b3X8qTj29IrjXMv-qb-cwOotaXMogZqLBShM2mOIIPnevdH9isy3fTqBkn2VRm1UPldfqrodhdTpJ78cuRGvSIjF1ECC4lrC8FaI6r1mZg_7jTKcs7IAtM7LG2ox6D6NGYaeSevHYgC9X6MTwDrxrOnhzU3dCXiKnFGstQS_Cc63LbN0-kp24Nw9m_ddnBWDw">
+      <div class="flex flex-col">
+        <span class="font-headline-sm text-headline-sm text-primary font-cooper leading-none">La Frescurita</span>
+        <span class="font-label-sm text-[11px] text-secondary uppercase tracking-widest font-semibold mt-0.5">Café &amp;
+          Tostaduría</span>
+      </div>
+    </div>
+    <button id="mobile-menu-close"
+      class="p-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors flex items-center justify-center cursor-pointer"
+      type="button" aria-label="Cerrar menú">
+      <span class="material-symbols-outlined text-[22px]">close</span>
+    </button>
+  </div>
+
+  <!-- Drawer Nav Links -->
+  <div class="flex-1 py-space-md px-space-sm overflow-y-auto">
+    <div class="px-space-sm mb-space-xs">
+      <span class="font-label-sm text-[11px] uppercase tracking-wider text-outline font-semibold">Navegación</span>
+    </div>
+    <nav class="space-y-1.5" id="mobile-nav-links">
+      <a class="mobile-nav-link flex items-center gap-3 px-space-md py-3 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all"
+        data-path="inicio" href="inicio.html">
+        <span class="material-symbols-outlined text-[20px] text-secondary">home</span>
+        <span>Inicio</span>
+      </a>
+      <a class="mobile-nav-link flex items-center gap-3 px-space-md py-3 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all"
+        data-path="menu-y-especialidades" href="menu-y-especialidades.html">
+        <span class="material-symbols-outlined text-[20px] text-secondary">restaurant_menu</span>
+        <span>Menú &amp; Especialidades</span>
+      </a>
+      <a class="mobile-nav-link flex items-center gap-3 px-space-md py-3 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all"
+        data-path="origen-y-tostaduria" href="origen-y-tostaduria.html">
+        <span class="material-symbols-outlined text-[20px] text-secondary">local_cafe</span>
+        <span>Origen &amp; Tostaduría</span>
+      </a>
+      <a class="mobile-nav-link flex items-center gap-3 px-space-md py-3 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all"
+        data-path="visitanos-y-reservas" href="visitanos-y-reservas.html">
+        <span class="material-symbols-outlined text-[20px] text-secondary">storefront</span>
+        <span>Visítanos &amp; Reservas</span>
+      </a>
+    </nav>
+
+    <!-- Direct Reservations CTA -->
+    <div class="mt-space-lg px-space-xs">
+      <a class="w-full py-3 px-space-md bg-[#5c3826] hover:bg-[#422312] text-[#ffffff] rounded-xl font-label-lg text-label-lg shadow-md transition-all flex items-center justify-center gap-2"
+        data-path="visitanos-y-reservas" href="visitanos-y-reservas.html">
+        <span class="material-symbols-outlined text-[20px]">table_restaurant</span>
+        <span>Reservar Mesa</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Drawer Footer Details -->
+  <div
+    class="p-space-md border-t border-[#5c3826]/10 bg-surface-container-low space-y-space-xs text-xs text-on-surface-variant">
+    <div class="flex items-center gap-2">
+      <span class="material-symbols-outlined text-[16px] text-secondary">location_on</span>
+      <span>Alejandro Dumas 81, Polanco</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <span class="material-symbols-outlined text-[16px] text-secondary">schedule</span>
+      <span>Lun - Dom: 07:00 - 21:00 hs</span>
+    </div>
+    <div class="flex items-center gap-2 pt-1">
+      <span class="material-symbols-outlined text-[16px] text-secondary">call</span>
+      <a class="hover:text-primary font-medium" href="tel:+541148213902">+54 11 4821-3902</a>
+    </div>
+  </div>
+</aside>
