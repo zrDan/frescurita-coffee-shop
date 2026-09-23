@@ -1,6 +1,6 @@
-# Frescurita Coffee Shop (La Frescurita Café & Tostaduría)
+# La Frescura Coffee Shop (La Frescura Café & Tostaduría)
 
-Sitio web estructurado y modularizado para **La Frescurita**, tostaduría artesanal de café de especialidad y panadería de masa madre.
+Sitio web estructurado y modularizado para **La Frescura**, tostaduría artesanal de café de especialidad y panadería de masa madre.
 
 ---
 

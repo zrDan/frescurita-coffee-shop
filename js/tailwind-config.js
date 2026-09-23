@@ -1,5 +1,5 @@
 /**
- * Configuración de Tailwind CSS para La Frescurita Café & Tostaduría
+ * Configuración de Tailwind CSS para La Frescura Café & Tostaduría
  * Tema: Calidez Artesanal
  */
 tailwind.config = {

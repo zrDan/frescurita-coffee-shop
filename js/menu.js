@@ -1,5 +1,5 @@
 /**
- * La Frescurita Café & Tostaduría
+ * La Frescura Café & Tostaduría
  * Interacciones del Menú y Especialidades (menu-y-especialidades.html)
  */
 

@@ -1,5 +1,5 @@
 /**
- * La Frescurita Café & Tostaduría
+ * La Frescura Café & Tostaduría
  * Scripts Globales, Cargador Dinámico de Componentes, Enrutador SPA e Interacciones
  */
 

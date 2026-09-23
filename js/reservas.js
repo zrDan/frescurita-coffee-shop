@@ -1,5 +1,5 @@
 /**
- * La Frescurita Café & Tostaduría
+ * La Frescura Café & Tostaduría
  * Interacciones de Visitas y Reservas de Mesas (visitanos-y-reservas.html)
  */
 

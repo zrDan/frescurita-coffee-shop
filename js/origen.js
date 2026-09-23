@@ -1,5 +1,5 @@
 /**
- * La Frescurita Café & Tostaduría
+ * La Frescura Café & Tostaduría
  * Interacciones de Origen y Tostaduría (origen-y-tostaduria.html)
  */
 
