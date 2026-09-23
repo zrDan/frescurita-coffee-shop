@@ -50,40 +50,40 @@ colors:
   surface-variant: '#e5e2dc'
 typography:
   display-lg:
-    fontFamily: Playfair Display
+    fontFamily: Cooper Black
     fontSize: 56px
     fontWeight: '600'
     lineHeight: 64px
     letterSpacing: -0.02em
   display-lg-mobile:
-    fontFamily: Playfair Display
+    fontFamily: Cooper Black
     fontSize: 38px
     fontWeight: '600'
     lineHeight: 46px
     letterSpacing: -0.01em
   headline-xl:
-    fontFamily: Playfair Display
+    fontFamily: Aharoni Bold
     fontSize: 40px
     fontWeight: '600'
     lineHeight: 48px
     letterSpacing: -0.01em
   headline-xl-mobile:
-    fontFamily: Playfair Display
+    fontFamily: Aharoni Bold
     fontSize: 30px
     fontWeight: '600'
     lineHeight: 38px
   headline-lg:
-    fontFamily: Playfair Display
+    fontFamily: Aharoni Bold
     fontSize: 32px
     fontWeight: '500'
     lineHeight: 40px
   headline-lg-mobile:
-    fontFamily: Playfair Display
+    fontFamily: Aharoni Bold
     fontSize: 24px
     fontWeight: '500'
     lineHeight: 32px
   headline-sm:
-    fontFamily: Playfair Display
+    fontFamily: Aharoni Bold
     fontSize: 22px
     fontWeight: '500'
     lineHeight: 28px
