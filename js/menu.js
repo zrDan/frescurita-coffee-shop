@@ -138,20 +138,10 @@ function initMenuScrollSpy() {
 }
 
 /**
- * Botones de selección de molienda en el personalizador de café en bolsa
+ * Selección de molienda en el personalizador de café en bolsa
  */
 function initGrindSelector() {
-  const grindBtns = document.querySelectorAll('.grind-btn');
-  grindBtns.forEach(b => {
-    b.onclick = () => {
-      grindBtns.forEach(other => {
-        other.classList.remove('bg-primary-container', 'bg-primary', 'text-on-primary', 'active');
-        other.classList.add('bg-surface-container-low', 'text-on-surface');
-      });
-      b.classList.remove('bg-surface-container-low', 'text-on-surface');
-      b.classList.add('bg-primary-container', 'text-on-primary', 'active');
-    };
-  });
+  // Los inputs radio nativos gestionan el estado activo y el color con peer-checked sin necesidad de sobrescribir clases
 }
 
 /**
